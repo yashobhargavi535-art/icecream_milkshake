@@ -3066,8 +3066,7 @@ body.dark-mode .footer-bottom-inner {
 .ch-contact-hero__tagline {
     margin: 0 0 14px;
 
-    color: var(--primary);
-
+    color: black;
     font-size: 20px;
     font-weight: 700;
 
@@ -3086,7 +3085,7 @@ body.dark-mode .footer-bottom-inner {
 
     margin: 0 0 18px;
 
-    color: #111111;
+    color: var(--primary);
 
     font-size: 30px;
     font-weight: 800;
@@ -3176,11 +3175,11 @@ body.dark-mode .ch-contact-hero__overlay {
 }
 
 body.dark-mode .ch-contact-hero__tagline {
-    color: #ec6547;
+    color: var(--secondary);
 }
 
 body.dark-mode .ch-contact-hero__title {
-    color: #ffffff;
+    color: black;
 }
 
 body.dark-mode .ch-contact-hero__title span {
@@ -3320,7 +3319,7 @@ html[dir="rtl"] .ch-contact-hero__description {
     display: block;
     margin-bottom: 14px;
 
-    color: #a8408b;
+    color: var(--primary);
 
     font-size: 20px;
     font-weight: 700;
@@ -3333,7 +3332,7 @@ html[dir="rtl"] .ch-contact-hero__description {
     max-width: 500px;
     margin: 0 0 22px;
 
-    color: #111111;
+    color: var(--secondary);
 
     font-size: 35px;
     font-weight: 800;
@@ -3341,7 +3340,7 @@ html[dir="rtl"] .ch-contact-hero__description {
 }
 
 .ch-talk-sweet__title span {
-    color: #ec6547;
+    color: var(--secondary);
 }
 
 .ch-talk-sweet__description {
@@ -3518,8 +3517,7 @@ html[dir="rtl"] .ch-contact-hero__description {
 .ch-talk-sweet__card-content h3 {
     margin: 0 0 10px;
 
-    color: #111111;
-
+    color: var(--primary);
     font-size: 20px;
     font-weight: 800;
     line-height: 1.35;
@@ -3589,9 +3587,11 @@ body.dark-mode .ch-talk-sweet__content {
     background: #181818;
 }
 
-body.dark-mode .ch-talk-sweet__title,
+body.dark-mode .ch-talk-sweet__title{
+    color: var(--secondary);
+}
 body.dark-mode .ch-talk-sweet__card-content h3 {
-    color: #ffffff;
+    color: var(--primary);
 }
 
 body.dark-mode .ch-talk-sweet__description,
@@ -3844,7 +3844,7 @@ html {
 
     margin-bottom: 14px;
 
-    color: #a8408b;
+    color: var(--primary);
 
     font-size: 20px;
     font-weight: 700;
@@ -3858,7 +3858,7 @@ html {
 
     margin: 0 0 22px;
 
-    color: #111111;
+    color: var(--secondary);
 
     font-size: 35px;
     font-weight: 800;
@@ -3876,7 +3876,7 @@ html {
 
     margin: 0 0 35px;
 
-    color: #555555;
+    color: black;
 
     font-size: 15px;
     line-height: 1.8;
@@ -3961,9 +3961,9 @@ html {
 
     margin-bottom: 8px;
 
-    color: #ec6547;
+    color: var(--secondary);
 
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.4;
 }
@@ -3971,7 +3971,7 @@ html {
 .ch-contact-form__panel-head h3 {
     margin: 0 0 10px;
 
-    color: #111111;
+    color: var(--primary);
 
     font-size: 25px;
     font-weight: 800;
@@ -3983,8 +3983,7 @@ html {
 
     margin: 0;
 
-    color: #666666;
-
+    color: black;
     font-size: 14px;
     line-height: 1.7;
 }
@@ -4020,9 +4019,9 @@ html {
 .ch-contact-form__field label {
     margin-bottom: 8px;
 
-    color: #333333;
+    color: var(--primary);
 
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.4;
 }
@@ -4072,7 +4071,7 @@ html {
 
 .ch-contact-form__field input::placeholder,
 .ch-contact-form__field textarea::placeholder {
-    color: #999999;
+    color: black;
 }
 
 
@@ -4166,11 +4165,11 @@ body.dark-mode .ch-contact-form__intro {
 }
 
 body.dark-mode .ch-contact-form__title {
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 body.dark-mode .ch-contact-form__description {
-    color: #cccccc;
+    color: white;
 }
 
 body.dark-mode .ch-contact-form__panel {
@@ -4183,15 +4182,15 @@ body.dark-mode .ch-contact-form__panel {
 }
 
 body.dark-mode .ch-contact-form__panel-head h3 {
-    color: #ffffff;
+    color: var(--primary);
 }
 
 body.dark-mode .ch-contact-form__panel-head p {
-    color: #cccccc;
+    color: white;
 }
 
 body.dark-mode .ch-contact-form__field label {
-    color: #eeeeee;
+    color: var(--primary);
 }
 
 body.dark-mode .ch-contact-form__field input,
@@ -4206,7 +4205,7 @@ body.dark-mode .ch-contact-form__field textarea {
 
 body.dark-mode .ch-contact-form__field input::placeholder,
 body.dark-mode .ch-contact-form__field textarea::placeholder {
-    color: #888888;
+    color: white;
 }
 
 body.dark-mode .ch-contact-form__field input:focus,
@@ -4221,7 +4220,7 @@ body.dark-mode .ch-contact-form__field textarea:focus {
 }
 
 body.dark-mode .ch-contact-form__note {
-    color: #aaaaaa;
+    color: white;
 }
 
 
@@ -4552,7 +4551,7 @@ html[dir="rtl"] .ch-form-success {
 
     margin-bottom: 14px;
 
-    color: #a8408b;
+    color: var(--primary);
 
     font-size: 20px;
     font-weight: 700;
@@ -4565,24 +4564,23 @@ html[dir="rtl"] .ch-form-success {
 .ch-map-location__title {
     margin: 0 0 20px;
 
-    color: #111111;
+    color: var(--secondary);
 
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 800;
 
     line-height: 1.2;
 }
 
 .ch-map-location__title span {
-    color: #ec6547;
+    color: var(--secondary);
 }
-
 .ch-map-location__intro {
     max-width: 650px;
 
     margin: 0 auto;
 
-    color: #5d5d5d;
+    color: black;
 
     font-size: 15px;
 
@@ -4670,9 +4668,8 @@ html[dir="rtl"] .ch-form-success {
 
     margin-bottom: 3px;
 
-    color: #ec6547;
-
-    font-size: 9px;
+    color: var(--secondary);
+    font-size: 12px;
     font-weight: 800;
 
     letter-spacing: 0.5px;
@@ -4724,9 +4721,9 @@ html[dir="rtl"] .ch-form-success {
 
     margin-bottom: 9px;
 
-    color: #ec6547;
+    color: var(--secondary);
 
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 800;
 
     letter-spacing: 0.4px;
@@ -4735,23 +4732,22 @@ html[dir="rtl"] .ch-form-success {
 .ch-map-location__panel h3 {
     margin: 0 0 16px;
 
-    color: #111111;
+    color:var(--primary);
 
-    font-size: 27px;
+    font-size: 24px;
     font-weight: 800;
 
     line-height: 1.25;
 }
 
 .ch-map-location__panel h3 span {
-    color: #a8408b;
+    color: var(--primary);
 }
 
 .ch-map-location__panel-text {
     margin: 0 0 30px;
 
-    color: #5d5d5d;
-
+    color: black;
     font-size: 14px;
 
     line-height: 1.8;
@@ -4773,9 +4769,8 @@ html[dir="rtl"] .ch-form-success {
 
     margin-bottom: 6px;
 
-    color: #a8408b;
-
-    font-size: 10px;
+    color: var(--primary);
+    font-size: 14px;
     font-weight: 800;
 
     letter-spacing: 0.4px;
@@ -4784,7 +4779,7 @@ html[dir="rtl"] .ch-form-success {
 .ch-map-location__info p {
     margin: 0;
 
-    color: #333333;
+    color: black;
 
     font-size: 14px;
 
@@ -4816,7 +4811,7 @@ html[dir="rtl"] .ch-form-success {
 
     padding: 11px 20px;
 
-    background: #a8408b;
+    background: var(--primary);
 
     color: #ffffff;
 
@@ -4932,15 +4927,17 @@ body.dark-mode .ch-map-location {
     background: #111111;
 }
 
-body.dark-mode .ch-map-location__title,
+body.dark-mode .ch-map-location__title{
+    color: var(--secondary);
+}
 body.dark-mode .ch-map-location__panel h3,
 body.dark-mode .ch-map-location__bottom h3 {
-    color: #ffffff;
+    color: var(--primary);
 }
 
 body.dark-mode .ch-map-location__intro,
 body.dark-mode .ch-map-location__panel-text {
-    color: #cccccc;
+    color: white;
 }
 
 body.dark-mode .ch-map-location__panel {
@@ -4957,7 +4954,7 @@ body.dark-mode .ch-map-location__info {
 }
 
 body.dark-mode .ch-map-location__info p {
-    color: #dddddd;
+    color: white;
 }
 
 body.dark-mode .ch-map-location__map-label {
@@ -4965,7 +4962,7 @@ body.dark-mode .ch-map-location__map-label {
 }
 
 body.dark-mode .ch-map-location__map-label strong {
-    color: #ffffff;
+    color: white;
 }
 
 body.dark-mode .ch-map-location__bottom {
@@ -5233,8 +5230,7 @@ html[dir="rtl"] .ch-map-location__bottom {
 .ch-before-visit__title {
     margin: 0 0 22px;
 
-    color: #111111;
-
+    color: var(--secondary);
     font-size: 35px;
     font-weight: 800;
 
@@ -5250,7 +5246,7 @@ html[dir="rtl"] .ch-map-location__bottom {
 
     margin: 0 0 30px;
 
-    color: #5c5c5c;
+    color: black;
 
     font-size: 15px;
 
@@ -5464,7 +5460,10 @@ body.dark-mode .ch-before-visit {
     background: #111111;
 }
 
-body.dark-mode .ch-before-visit__title,
+body.dark-mode .ch-before-visit__title{
+    color: var(--secondary);
+}
+
 body.dark-mode .ch-before-visit__question {
     color: #ffffff;
 }
@@ -5742,7 +5741,7 @@ html[dir="rtl"]
 
     margin-bottom: 15px;
 
-    color: #ec6547;
+    color: black;
 
     font-size: 20px;
     font-weight: 700;
@@ -5755,7 +5754,7 @@ html[dir="rtl"]
 .ch-sweet-moment__title {
     margin: 0 0 22px;
 
-    color: #ffffff;
+    color: var(--primary);
 
     font-size: 35px;
     font-weight: 800;

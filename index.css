@@ -1,0 +1,7879 @@
+
+/* =========================================================
+   ROYAL / SCOOP HAVEN HEADER
+   Primary   : #A8408B
+   Secondary : #EC6547
+   ========================================================= */
+
+:root {
+    --primary: #a8408b;
+    --secondary: #ec6547;
+
+    --header-height: 82px;
+    --header-padding: 28px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
+.header-container {
+    width: 100%;
+    min-height: var(--header-height);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 14px var(--header-padding);
+
+    background: #ffffff;
+
+    position: relative;
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(168, 64, 139, 0.15);
+
+    transition:
+        background-color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    min-width: 0;
+}
+
+
+/* Logo Image */
+
+.brand-logo img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    transition: transform var(--transition);
+}
+
+
+/* Small hover effect */
+
+.brand-logo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   LOGO TEXT
+   ========================================================= */
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1;
+}
+
+
+/* Logo Name */
+
+.brand-text h1 {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* Cream */
+
+.brand-text h1 span {
+    color: var(--primary);
+}
+
+
+/* Haven */
+
+.brand-text h1 strong {
+    color: var(--secondary);
+
+    font-weight: 800;
+}
+
+
+/* Tagline */
+
+.brand-text p {
+    margin-top: 5px;
+  margin-left: 18px;
+    color: var(--primary);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Navigation Links */
+
+.nav-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 10px 13px;
+
+    color: #333333;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-radius: 8px;
+
+    transition:
+        color var(--transition),
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+
+/* Navigation Hover */
+
+.nav-link:hover {
+    color: var(--primary);
+
+      background: transparent;
+}
+
+
+/* Active Navigation */
+
+.nav-link.active {
+    color: var(--primary);
+
+     background: transparent;
+}
+
+
+/* Active Bottom Indicator */
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+
+    bottom: 3px;
+
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: var(--secondary);
+}
+
+
+/* Home Arrow */
+
+.nav-link i {
+    font-size: 9px;
+
+    color: var(--secondary);
+
+    transition: transform var(--transition);
+}
+
+.nav-link:hover i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ICON BUTTONS
+   ========================================================= */
+
+.header-icon-btn {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(168, 64, 139, 0.25);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--primary);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+
+/* Icon Hover */
+
+.header-icon-btn:hover {
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-btn {
+    min-height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border: 0;
+
+    border-radius: 22px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background-color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+/* Login Icon */
+
+.login-btn i {
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+/* Login Hover */
+
+.login-btn:hover {
+    background: var(--secondary);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(236, 101, 71, 0.22);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+/*
+   Your JavaScript adds:
+   body.dark-mode
+*/
+
+body.dark-mode {
+    background: #111111;
+}
+
+
+/* Header */
+
+body.dark-mode .header-container {
+    background: #111111;
+
+    border-bottom-color: rgba(168, 64, 139, 0.35);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Navigation */
+
+body.dark-mode .nav-link {
+    color: #ffffff;
+}
+
+
+body.dark-mode .nav-link:hover {
+    color: var(--secondary);
+
+     background: transparent;
+}
+
+
+body.dark-mode .nav-link.active {
+    color: var(--secondary);
+
+    background: transparent;
+}
+
+
+/* Navigation Arrow */
+
+body.dark-mode .nav-link i {
+    color: var(--secondary);
+}
+
+
+/* Icon Buttons */
+
+body.dark-mode .header-icon-btn {
+    background: #111111;
+
+    color: var(--secondary);
+
+    border-color: rgba(236, 101, 71, 0.35);
+}
+
+
+body.dark-mode .header-icon-btn:hover {
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    border-color: var(--secondary);
+}
+
+
+/* Login stays branded */
+
+body.dark-mode .login-btn {
+    background: var(--primary);
+
+    color: #ffffff;
+}
+
+
+body.dark-mode .login-btn:hover {
+    background: var(--secondary);
+}
+
+
+/* =========================================================
+   RTL MODE
+   ========================================================= */
+
+body.rtl-mode .header-container {
+    direction: rtl;
+}
+
+
+/* Logo */
+
+body.rtl-mode .brand-logo {
+    direction: rtl;
+}
+
+
+/* Logo text */
+
+body.rtl-mode .brand-text {
+    text-align: right;
+}
+
+
+/* Navigation */
+
+body.rtl-mode .main-nav {
+    direction: rtl;
+}
+
+
+/* Actions */
+
+body.rtl-mode .header-actions {
+    direction: rtl;
+}
+
+
+/* Home arrow */
+
+body.rtl-mode .nav-link i {
+    transform: rotate(180deg);
+}
+
+
+body.rtl-mode .nav-link:hover i {
+    transform: rotate(0deg);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1200px+
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .header-container {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP
+   992px - 1199px
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .header-container {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        gap: 15px;
+    }
+
+    .brand-logo img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .brand-text h1 {
+        font-size: 22px;
+    }
+
+    .brand-text p {
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    .main-nav {
+        gap: 2px;
+    }
+
+    .nav-link {
+        padding: 9px 9px;
+
+        font-size: 13px;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
+
+    .header-icon-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .login-btn {
+        padding: 0 14px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / IPAD
+   768px - 991px
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .header-container {
+        padding: 12px 20px;
+
+        gap: 12px;
+    }
+
+    .brand-logo {
+        gap: 8px;
+    }
+
+    .brand-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-text h1 {
+        font-size: 20px;
+    }
+
+    .brand-text p {
+        font-size: 6px;
+        letter-spacing: 1.2px;
+    }
+
+    .main-nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 8px 7px;
+
+        font-size: 12px;
+    }
+
+    .nav-link i {
+        font-size: 8px;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .header-icon-btn {
+        width: 36px;
+        height: 36px;
+
+        font-size: 13px;
+    }
+
+    .login-btn {
+        min-height: 36px;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+
+        gap: 5px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   576px - 767px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .header-container {
+        min-height: auto;
+
+        padding: 12px 16px;
+
+        flex-wrap: wrap;
+
+        row-gap: 12px;
+    }
+
+
+    /* Logo */
+
+    .brand-logo {
+        gap: 8px;
+    }
+
+    .brand-logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-text h1 {
+        font-size: 20px;
+    }
+
+    .brand-text p {
+        font-size: 6px;
+        letter-spacing: 1.2px;
+    }
+
+
+    /* Actions stay beside logo */
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+
+    /* Navigation becomes full width */
+
+    .main-nav {
+        order: 3;
+
+        width: 100%;
+
+        margin: 0;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+
+        padding-top: 2px;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-link {
+        flex: 0 0 auto;
+
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+    .nav-link.active::after {
+        left: 10px;
+        right: 10px;
+    }
+
+
+    /* Login text */
+
+    .login-btn span {
+        display: none;
+    }
+
+    .login-btn {
+        width: 38px;
+        height: 38px;
+
+        min-height: 38px;
+
+        padding: 0;
+
+        border-radius: 50%;
+    }
+
+    .login-btn i {
+        font-size: 13px;
+    }
+
+
+    /* Icon buttons */
+
+    .header-icon-btn {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   Up to 575px
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .header-container {
+        padding: 10px 12px;
+
+        row-gap: 10px;
+    }
+
+
+    /* Logo */
+
+    .brand-logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .brand-text h1 {
+        font-size: 18px;
+
+        letter-spacing: -0.3px;
+    }
+
+    .brand-text p {
+        margin-top: 4px;
+
+        font-size: 5px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* Header actions */
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .header-icon-btn {
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+    }
+
+    .login-btn {
+        width: 34px;
+        height: 34px;
+
+        min-height: 34px;
+    }
+
+
+    /* Navigation */
+
+    .main-nav {
+        justify-content: flex-start;
+
+        gap: 2px;
+    }
+
+    .nav-link {
+        padding: 7px 9px;
+
+        font-size: 11px;
+    }
+
+    .nav-link.active::after {
+        left: 9px;
+        right: 9px;
+
+        bottom: 2px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL IPHONE / COMPACT MOBILE
+   Up to 390px
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .header-container {
+        padding: 9px 10px;
+    }
+
+    .brand-logo {
+        gap: 6px;
+    }
+
+    .brand-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand-text h1 {
+        font-size: 17px;
+    }
+
+    .brand-text p {
+        font-size: 4.5px;
+
+        letter-spacing: 0.8px;
+    }
+
+    .header-actions {
+        gap: 4px;
+    }
+
+    .header-icon-btn {
+        width: 32px;
+        height: 32px;
+
+        font-size: 11px;
+    }
+
+    .login-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-link {
+        padding: 7px 8px;
+
+        font-size: 10.5px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   Up to 350px
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .brand-logo img {
+        width: 37px;
+        height: 37px;
+    }
+
+    .brand-text h1 {
+        font-size: 15px;
+    }
+
+    .brand-text p {
+        display: none;
+    }
+
+    .header-icon-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .login-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-link {
+        padding: 6px 7px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   RTL MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    body.rtl-mode .header-container {
+        flex-direction: row-reverse;
+    }
+
+    body.rtl-mode .brand-logo {
+        flex-direction: row;
+    }
+
+    body.rtl-mode .header-actions {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    body.rtl-mode .main-nav {
+        direction: rtl;
+
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.header-icon-btn:focus-visible,
+.login-btn:focus-visible,
+.nav-link:focus-visible,
+.brand-logo:focus-visible {
+    outline: 2px solid var(--secondary);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   CREAM HAVEN FOOTER
+   ========================================================= */
+
+
+/* =========================================================
+   BRAND COLORS
+   ========================================================= */
+
+:root {
+
+    --primary: #a8408b;
+    --secondary: #ec6547;
+
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+.main-footer {
+
+    width: 100%;
+
+    background: white;
+    color: white;
+
+    padding: 55px 0 50px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+   ========================================================= */
+
+.footer-container {
+
+    width: min(1320px, 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 30px;
+
+    align-items: start;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   ALL FIVE COLUMNS
+   ========================================================= */
+
+.footer-column {
+
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   BRAND COLUMN
+   ========================================================= */
+
+.footer-brand-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+   ========================================================= */
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    width: fit-content;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* Logo image */
+
+.footer-logo-image {
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+
+}
+
+
+/* Logo text */
+
+.footer-brand-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+
+}
+
+
+/* Cream Haven */
+
+.footer-brand-name {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+}
+
+
+/* Primary */
+
+.brand-primary {
+
+    color: var(--primary);
+
+}
+
+
+/* Secondary */
+
+.brand-secondary {
+
+    color: var(--secondary);
+
+}
+
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.footer-tagline {
+
+    display: block;
+
+    margin-top: 8px;
+    margin-left: 12px;
+    color: var(--primary);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 3.5px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   BRAND DESCRIPTION
+   ========================================================= */
+
+.footer-description {
+
+    margin: 0;
+
+    padding: 15px;
+
+    color: black;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    max-width: 270px;
+
+}
+
+
+/* =========================================================
+   FOOTER TITLE
+   ========================================================= */
+
+.footer-title {
+
+    position: relative;
+
+    margin: 0 0 27px;
+
+    padding-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+}
+
+
+/* Footer title underline */
+
+.footer-title::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 40px;
+
+    height: 3px;
+
+    background: var(--secondary);
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footer-links {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+/* Individual item */
+
+.footer-links li {
+
+    margin: 0 0 15px;
+
+    padding: 0;
+
+}
+
+
+/* Last item */
+
+.footer-links li:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* Link */
+
+.footer-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+/* Arrow */
+
+.footer-arrow {
+
+    color: var(--secondary);
+
+    font-size: 20px;
+
+    line-height: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* Hover */
+
+.footer-links a:hover {
+
+    color: var(--secondary);
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================================
+   GET IN TOUCH
+   ========================================================= */
+
+.contact-column {
+
+    width: 100%;
+
+}
+
+
+/* Contact row */
+
+.contact-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    width: 100%;
+
+    min-height: 30px;
+
+    margin: 0 0 15px;
+
+}
+
+
+/* Contact icon */
+
+.contact-icon {
+
+    width: 21px;
+
+    min-width: 21px;
+
+    color: var(--secondary);
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    padding-top: 1px;
+
+}
+
+
+/* Contact text */
+
+.contact-item p {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: black;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
+.footer-social {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 20px;
+
+}
+
+
+/* Social circle */
+
+.footer-social a {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid var(--secondary);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--secondary);
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+/* Social hover */
+
+.footer-social a:hover {
+
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: var(--primary);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .main-footer {
+
+    background: var(--secondary);
+
+    color: var(--primary);
+
+}
+
+
+/* Dark mode brand */
+
+body.dark-mode .brand-primary {
+
+    color: var(--primary);
+
+}
+
+
+body.dark-mode .brand-secondary {
+
+    color: #ffffff;
+
+}
+
+
+/* Dark mode tagline */
+
+body.dark-mode .footer-tagline {
+
+    color: var(--primary);
+
+}
+
+
+/* Dark mode description */
+
+body.dark-mode .footer-description {
+
+    color: #ffffff;
+
+}
+
+
+/* Dark mode headings */
+
+body.dark-mode .footer-title {
+
+    color: var(--primary);
+
+}
+
+
+body.dark-mode .footer-title::after {
+
+    background: var(--primary);
+
+}
+
+
+/* Dark mode links */
+
+body.dark-mode .footer-links a {
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode .footer-links a:hover {
+
+    color: var(--primary);
+
+}
+
+
+/* Dark mode arrows */
+
+body.dark-mode .footer-arrow {
+
+    color: var(--primary);
+
+}
+
+
+/* Dark mode contact */
+
+body.dark-mode .contact-icon {
+
+    color: var(--primary);
+
+}
+
+
+body.dark-mode .contact-item p {
+
+    color: #ffffff;
+
+}
+
+
+/* Dark mode social */
+
+body.dark-mode .footer-social a {
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+}
+
+
+body.dark-mode .footer-social a:hover {
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: var(--secondary);
+
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html[dir="rtl"] .footer-container {
+
+    direction: rtl;
+
+}
+
+
+/* Logo */
+
+html[dir="rtl"] .footer-brand {
+
+    flex-direction: row;
+
+}
+
+
+/* Footer title underline */
+
+html[dir="rtl"] .footer-title::after {
+
+    left: auto;
+
+    right: 0;
+
+}
+
+
+/* Footer links */
+
+html[dir="rtl"] .footer-links a {
+
+    flex-direction: row;
+
+}
+
+
+html[dir="rtl"] .footer-links a:hover {
+
+    transform: translateX(-4px);
+
+}
+
+
+/* Contact */
+
+html[dir="rtl"] .contact-item {
+
+    flex-direction: row;
+
+}
+
+
+/* Social */
+
+html[dir="rtl"] .footer-social {
+
+    justify-content: flex-start;
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1201px+
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+    .footer-container {
+
+        gap: 50px;
+
+    }
+
+    .footer-logo-image {
+
+        width: 76px;
+
+        height: 64px;
+
+    }
+
+    .footer-brand-name {
+
+        font-size: 29px;
+
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+   1025px - 1200px
+   ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    .footer-container {
+
+        width: 94%;
+
+        gap: 28px;
+
+    }
+
+    .footer-brand-name {
+
+        font-size: 24px;
+
+    }
+
+    .footer-logo-image {
+
+        width: 65px;
+
+        height: 58px;
+
+    }
+
+    .footer-tagline {
+
+        font-size: 7px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+    .footer-title {
+
+        font-size: 18px;
+
+    }
+
+    .footer-links a,
+    .contact-item p,
+    .footer-description {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .main-footer {
+
+        padding: 48px 0;
+
+    }
+
+    .footer-container {
+
+        width: 92%;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        column-gap: 35px;
+
+        row-gap: 45px;
+
+    }
+
+    .footer-brand-name {
+
+        font-size: 25px;
+
+    }
+
+    .footer-logo-image {
+
+        width: 68px;
+
+        height: 58px;
+
+    }
+
+    .footer-title {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* =========================================================
+   IPAD / SMALL TABLET
+   601px - 768px
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    .main-footer {
+
+        padding: 45px 0;
+
+    }
+
+    .footer-container {
+
+        width: 90%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 35px;
+
+        row-gap: 45px;
+
+    }
+
+    .footer-brand-name {
+
+        font-size: 26px;
+
+    }
+
+    .footer-logo-image {
+
+        width: 68px;
+
+        height: 58px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 600px
+   ========================================================= */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+    .main-footer {
+
+        padding: 42px 0;
+
+    }
+
+    .footer-container {
+
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+
+    }
+
+    .footer-brand-name {
+
+        font-size: 27px;
+
+    }
+
+    .footer-logo-image {
+
+        width: 70px;
+
+        height: 60px;
+
+    }
+
+    .footer-description {
+
+        max-width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   IPHONE / SAMSUNG / SMALL MOBILE
+   320px - 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .main-footer {
+
+        padding: 40px 0;
+
+    }
+
+    .footer-container {
+
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    /* Logo */
+
+    .footer-brand {
+
+        gap: 9px;
+
+        margin-bottom: 16px;
+
+    }
+
+    .footer-logo-image {
+
+        width: 64px;
+
+        height: 55px;
+
+    }
+
+    .footer-brand-name {
+
+        font-size: 24px;
+
+    }
+
+    .footer-tagline {
+
+        font-size: 7px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+
+    /* Description */
+
+    .footer-description {
+
+        max-width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* Headings */
+
+    .footer-title {
+
+        font-size: 19px;
+
+        margin-bottom: 22px;
+
+    }
+
+
+    /* Links */
+
+    .footer-links li {
+
+        margin-bottom: 13px;
+
+    }
+
+    .footer-links a {
+
+        font-size: 13px;
+
+    }
+
+
+    /* Contact */
+
+    .contact-item {
+
+        gap: 10px;
+
+        margin-bottom: 13px;
+
+    }
+
+    .contact-icon {
+
+        width: 20px;
+
+        min-width: 20px;
+
+    }
+
+    .contact-item p {
+
+        font-size: 13px;
+
+    }
+
+
+    /* Social */
+
+    .footer-social {
+
+        gap: 8px;
+
+        margin-top: 17px;
+
+    }
+
+    .footer-social a {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   320px - 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .footer-container {
+
+        width: 90%;
+
+    }
+
+    .footer-brand-name {
+
+        font-size: 22px;
+
+    }
+
+    .footer-logo-image {
+
+        width: 58px;
+
+        height: 50px;
+
+    }
+
+    .footer-tagline {
+
+        font-size: 6px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .footer-social {
+
+        gap: 6px;
+
+    }
+
+    .footer-social a {
+
+        width: 36px;
+
+        height: 36px;
+
+    }
+
+}
+
+/* =========================================================
+   HOME DROPDOWN
+   ========================================================= */
+
+.nav-dropdown {
+    position: relative;
+}
+
+
+/* Home */
+
+.nav-dropdown > .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* Arrow */
+
+.nav-dropdown > .nav-link i {
+    color: var(--secondary);
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 140px;
+
+    padding: 5px 0;
+
+    background: var(--secondary);
+
+    display: none;
+
+    z-index: 1000;
+}
+
+
+/* Show dropdown */
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* =========================================================
+   HOME 1 / HOME 2
+   ========================================================= */
+
+.dropdown-item {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    color: #ffffff;
+
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+/* Hover */
+
+.dropdown-item:hover {
+    background: var(--primary);
+
+    color: #ffffff;
+}
+
+
+/* ONLY SELECTED PAGE */
+
+.dropdown-item.active {
+    background: var(--primary);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+body.rtl-mode .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+body.rtl-mode .dropdown-item {
+    text-align: right;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .dropdown-menu {
+    background: var(--secondary);
+}
+
+body.dark-mode .dropdown-item {
+    color: #ffffff;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background: var(--primary);
+}
+
+body.dark-mode .dropdown-item.active {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .dropdown-menu {
+        width: 125px;
+    }
+
+    .dropdown-item {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .dropdown-menu {
+        width: 120px;
+    }
+
+    .dropdown-item {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   FOOTER LAYOUT
+   ========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 50px 48px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(270px, 1.35fr)
+        minmax(170px, 1fr)
+        minmax(170px, 1fr)
+        minmax(190px, 1fr)
+        minmax(190px, 1fr);
+
+    column-gap: 55px;
+
+    row-gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FOOTER LOGO / ABOUT COLUMN
+   ========================================================= */
+
+.footer-about {
+    min-width: 0;
+
+    padding-right: 15px;
+}
+
+
+/* Footer logo */
+
+.footer-about .brand-logo,
+.footer-about .footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    white-space: nowrap;
+}
+
+
+/* Footer logo image */
+
+.footer-about .brand-logo img,
+.footer-about .footer-logo img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* Footer logo name */
+
+.footer-about .brand-text h1,
+.footer-about .footer-logo h1 {
+    font-size: 27px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+
+/* Footer tagline */
+
+.footer-about .brand-text p,
+.footer-about .footer-logo p {
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+/* Footer description */
+
+.footer-about > p {
+    max-width: 260px;
+
+    margin-top: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   QUICK LINKS COLUMN
+   ========================================================= */
+
+.footer-links {
+    min-width: 0;
+
+    padding-left: 15px;
+}
+
+
+/* Quick Links heading */
+
+.footer-links h3 {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   OTHER FOOTER COLUMNS
+   ========================================================= */
+
+.footer-services,
+.footer-care,
+.footer-contact {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   FOOTER COLUMN SPACING
+   ========================================================= */
+
+.footer-links,
+.footer-services,
+.footer-care,
+.footer-contact {
+    padding-top: 2px;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .footer-container {
+    background: #111111;
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+body.rtl-mode .footer-container {
+    direction: rtl;
+}
+
+body.rtl-mode .footer-about {
+    padding-right: 0;
+    padding-left: 15px;
+}
+
+body.rtl-mode .footer-links {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .footer-container {
+        grid-template-columns:
+            minmax(250px, 1.3fr)
+            minmax(150px, 1fr)
+            minmax(150px, 1fr)
+            minmax(170px, 1fr);
+
+        column-gap: 35px;
+
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .footer-contact {
+        grid-column: span 1;
+    }
+}
+
+
+/* =========================================================
+   TABLET / IPAD
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        column-gap: 40px;
+
+        row-gap: 40px;
+
+        padding: 45px 30px;
+    }
+
+    .footer-about {
+        grid-column: span 2;
+    }
+
+    .footer-about .brand-logo,
+    .footer-about .footer-logo {
+        margin-bottom: 15px;
+    }
+
+    .footer-about > p {
+        max-width: 500px;
+    }
+
+    .footer-links {
+        padding-left: 0;
+    }
+
+    body.rtl-mode .footer-links {
+        padding-right: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 40px 22px;
+
+        row-gap: 32px;
+    }
+
+    .footer-about {
+        grid-column: auto;
+    }
+
+    .footer-about .brand-logo,
+    .footer-about .footer-logo {
+        gap: 9px;
+    }
+
+    .footer-about .brand-logo img,
+    .footer-about .footer-logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .footer-about .brand-text h1,
+    .footer-about .footer-logo h1 {
+        font-size: 27px;
+    }
+
+    .footer-about > p {
+        max-width: 100%;
+    }
+
+    .footer-links {
+        padding-left: 0;
+    }
+
+    body.rtl-mode .footer-links {
+        padding-right: 0;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .footer-container {
+        padding: 35px 18px;
+
+        row-gap: 28px;
+    }
+
+    .footer-about .brand-logo img,
+    .footer-about .footer-logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer-about .brand-text h1,
+    .footer-about .footer-logo h1 {
+        font-size: 24px;
+    }
+
+    .footer-about .brand-text p,
+    .footer-about .footer-logo p {
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+    }
+}
+
+/* =========================================================
+   CREAM HAVEN
+   POPULAR CATEGORIES
+   ========================================================= */
+
+.cream-popular-categories {
+    width: 100%;
+    margin-top: 0;
+    padding: 30px 30px;
+
+    background: #ffffff;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.popular-categories-container {
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.popular-categories-heading {
+    max-width: 680px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.popular-categories-label {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+   
+}
+
+
+.popular-categories-heading h2 {
+    margin: 0;
+
+    font-weight: 800;
+
+    line-height: 1.15;
+ font-size: 35px;
+    letter-spacing: -1px;
+}
+
+
+.popular-categories-heading h2 {
+    color: var(--secondary);
+}
+
+
+.popular-categories-heading p {
+    max-width: 570px;
+
+    margin: 17px auto 0;
+
+    color: black;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+   ========================================================= */
+
+.popular-categories-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+   ========================================================= */
+
+.category-card {
+    position: relative;
+
+    display: flex;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    min-height: 355px;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(168, 64, 139, 0.12);
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+
+    isolation: isolate;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.category-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 38px rgba(168, 64, 139, 0.15);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.category-image {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+}
+
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.category-card:hover .category-image img {
+    transform: scale(1.06);
+}
+
+
+/* Image Overlay */
+
+.category-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.02) 25%,
+            rgba(0, 0, 0, 0.78) 100%
+        );
+}
+
+
+/* =========================================================
+   CATEGORY CONTENT
+   ========================================================= */
+
+.category-content {
+    width: 100%;
+
+    min-height: 355px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 27px;
+
+    color: #ffffff;
+}
+
+
+.category-number {
+    position: absolute;
+
+    top: 22px;
+
+    right: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.category-content h3 {
+    margin: 0 0 7px;
+
+    color: var(--secondary);
+
+    font-size: 25px;
+
+    font-weight: 800;
+}
+
+
+.category-content p {
+    max-width: 280px;
+
+    margin: 0 0 17px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   EXPLORE LINK
+   ========================================================= */
+
+.category-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+
+.category-link i {
+    font-size: 11px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.category-card:hover .category-link i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .cream-popular-categories {
+    background: #111111;
+}
+
+
+body.dark-mode .popular-categories-heading h2 {
+    color: var(--secondary);
+}
+
+
+body.dark-mode .popular-categories-heading p {
+    color: #cccccc;
+}
+
+
+body.dark-mode .category-card {
+    background: #111111;
+
+    border-color: rgba(168, 64, 139, 0.25);
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+body.dark-mode .category-card:hover {
+    box-shadow: 0 18px 38px rgba(168, 64, 139, 0.20);
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+body.rtl-mode .cream-popular-categories {
+    direction: rtl;
+}
+
+
+body.rtl-mode .popular-categories-heading {
+    text-align: center;
+}
+
+
+body.rtl-mode .category-content {
+    text-align: right;
+}
+
+
+body.rtl-mode .category-number {
+    right: auto;
+
+    left: 22px;
+}
+
+
+body.rtl-mode .category-link {
+    direction: rtl;
+}
+
+
+body.rtl-mode .category-link i {
+    transform: rotate(180deg);
+}
+
+
+body.rtl-mode .category-card:hover .category-link i {
+    transform: rotate(180deg) translateX(5px);
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .cream-popular-categories {
+        padding: 90px 25px;
+    }
+
+    .popular-categories-grid {
+        gap: 20px;
+    }
+
+    .category-card,
+    .category-content {
+        min-height: 330px;
+    }
+
+    .category-content {
+        padding: 24px;
+    }
+}
+
+
+/* =========================================================
+   IPAD / TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .cream-popular-categories {
+        padding: 80px 22px;
+    }
+
+    .popular-categories-heading {
+        margin-bottom: 45px;
+    }
+
+    .popular-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .category-card,
+    .category-content {
+        min-height: 340px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE / SAMSUNG / IPHONE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cream-popular-categories {
+        padding: 70px 18px;
+    }
+
+    .popular-categories-heading {
+        margin-bottom: 35px;
+    }
+
+    .popular-categories-label {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .popular-categories-heading h2 {
+        font-size: 34px;
+    }
+
+    .popular-categories-heading p {
+        margin-top: 13px;
+
+        font-size: 14px;
+    }
+
+    .popular-categories-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .category-card,
+    .category-content {
+        min-height: 330px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .cream-popular-categories {
+        padding: 60px 15px;
+    }
+
+    .popular-categories-heading h2 {
+        font-size: 31px;
+    }
+
+    .category-card,
+    .category-content {
+        min-height: 310px;
+    }
+
+    .category-content {
+        padding: 22px;
+    }
+
+    .category-content h3 {
+        font-size: 22px;
+    }
+
+    .category-content p {
+        font-size: 12px;
+    }
+
+    .category-number {
+        top: 18px;
+        right: 18px;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 10px;
+    }
+
+    body.rtl-mode .category-number {
+        right: auto;
+        left: 18px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL IPHONE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .cream-popular-categories {
+        padding: 50px 12px;
+    }
+
+    .popular-categories-heading h2 {
+        font-size: 28px;
+    }
+
+    .popular-categories-heading p {
+        font-size: 13px;
+    }
+
+    .category-card,
+    .category-content {
+        min-height: 295px;
+    }
+}
+
+/* =========================================================
+   CREAM HAVEN
+   SIGNATURE FLAVOURS
+   ========================================================= */
+
+.cream-signature-flavours {
+    width: 100%;
+    padding: 90px 30px;
+  
+    padding-bottom: 80px;
+    background: #ffffff;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.signature-container {
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+.signature-title {
+    margin: 0;
+
+    font-size: 35px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.signature-title .title-primary {
+    color: var(--primary);
+}
+
+
+.signature-title .title-secondary {
+    color: var(--secondary);
+}
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.signature-heading {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.signature-tagline {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    /* No letter spacing */
+}
+
+
+.signature-heading h2 {
+    margin: 0;
+
+    color: var(--secondary);
+
+    font-size: 35px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.signature-heading h2 span {
+    color: var(--secondary);
+}
+
+
+.signature-heading p {
+    max-width: 650px;
+
+    margin: 16px auto 0;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.signature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.signature-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(168, 64, 139, 0.15);
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.signature-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 35px rgba(168, 64, 139, 0.14);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.signature-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 245px;
+
+    overflow: hidden;
+}
+
+
+.signature-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.signature-card:hover .signature-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.signature-badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+   ========================================================= */
+
+.signature-content {
+    padding: 23px 21px 21px;
+}
+
+
+.signature-category {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.signature-content h3 {
+    margin: 0;
+
+    color: var(--secondary);
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.signature-content p {
+    min-height: 52px;
+
+    margin: 10px 0 18px;
+
+    color: #000000;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRICE + ORDER
+   ========================================================= */
+
+.signature-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(168, 64, 139, 0.12);
+}
+
+
+.signature-bottom strong {
+    color: var(--primary);
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+
+.signature-order {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--secondary);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.signature-order i {
+    font-size: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.signature-order:hover {
+    color: var(--primary);
+}
+
+
+.signature-order:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   VIEW FULL MENU
+   ========================================================= */
+
+.signature-view-all {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+
+.signature-menu-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding: 0 25px;
+
+    border-radius: 30px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.signature-menu-btn:hover {
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.signature-menu-btn i {
+    transition: transform 0.3s ease;
+}
+
+
+.signature-menu-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .cream-signature-flavours {
+    background: #111111;
+}
+
+body.dark-mode .signature-content h3{
+    color: var(--secondary);
+}
+
+body.dark-mode .signature-heading h2,
+body.dark-mode .signature-heading p,
+body.dark-mode .signature-content p {
+    color: #ffffff;
+}
+
+
+body.dark-mode .signature-card {
+    background: #111111;
+
+    border-color: rgba(168, 64, 139, 0.3);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+body.dark-mode .signature-card:hover {
+    box-shadow: 0 18px 35px rgba(168, 64, 139, 0.2);
+}
+
+
+body.dark-mode .signature-bottom {
+    border-top-color: rgba(168, 64, 139, 0.25);
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+body.rtl-mode .cream-signature-flavours {
+    direction: rtl;
+}
+
+
+body.rtl-mode .signature-content {
+    text-align: right;
+}
+
+
+body.rtl-mode .signature-badge {
+    left: auto;
+
+    right: 15px;
+}
+
+
+body.rtl-mode .signature-order {
+    direction: rtl;
+}
+
+
+body.rtl-mode .signature-order i,
+body.rtl-mode .signature-menu-btn i {
+    transform: rotate(180deg);
+}
+
+
+body.rtl-mode .signature-order:hover i,
+body.rtl-mode .signature-menu-btn:hover i {
+    transform: rotate(180deg) translateX(4px);
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .cream-signature-flavours {
+        padding: 90px 25px;
+    }
+
+    .signature-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 22px;
+    }
+
+    .signature-image {
+        height: 270px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / IPAD
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .cream-signature-flavours {
+        padding: 80px 22px;
+    }
+
+    .signature-heading {
+        margin-bottom: 45px;
+    }
+
+    .signature-image {
+        height: 250px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE / SAMSUNG / IPHONE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cream-signature-flavours {
+        padding: 70px 18px;
+    }
+
+    .signature-heading {
+        margin-bottom: 35px;
+    }
+
+    .signature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .signature-heading h2 {
+        font-size: 35px;
+    }
+
+    .signature-heading p {
+        font-size: 14px;
+    }
+
+    .signature-image {
+        height: 280px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .cream-signature-flavours {
+        padding: 60px 15px;
+    }
+
+    .signature-tagline {
+        font-size: 20px;
+    }
+
+    .signature-heading h2 {
+        font-size: 35px;
+    }
+
+    .signature-heading p {
+        font-size: 13px;
+    }
+
+    .signature-image {
+        height: 255px;
+    }
+
+    .signature-content {
+        padding: 20px 18px;
+    }
+
+    .signature-content h3 {
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL IPHONE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .cream-signature-flavours {
+        padding: 50px 12px;
+    }
+
+    .signature-image {
+        height: 230px;
+    }
+
+    .signature-content p {
+        font-size: 12px;
+    }
+
+    .signature-bottom strong {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   CREAM HAVEN
+   ABOUT SECTION
+   ========================================================= */
+
+.cream-about-section {
+    width: 100%;
+
+    padding: 85px 30px;
+
+    background: #ffffff;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.about-container {
+    width: 100%;
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.95fr 1.05fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+   ========================================================= */
+
+.about-visual {
+    position: relative;
+
+    max-width: 510px;
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+.about-main-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 540px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+}
+
+
+.about-main-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.about-main-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   IMAGE ACCENT CARD
+   ========================================================= */
+
+.about-accent-card {
+    position: absolute;
+
+    right: -25px;
+
+    bottom: 35px;
+
+    width: 145px;
+
+    min-height: 125px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    box-shadow: 0 12px 30px rgba(236, 101, 71, 0.20);
+}
+
+
+.about-accent-card strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.about-accent-card span {
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.about-content {
+    max-width: 570px;
+}
+
+
+.about-tagline {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    /* No letter-spacing */
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.about-title {
+    margin: 0;
+
+    font-size: 35px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.about-title-primary {
+    display: block;
+
+    color: var(--primary);
+}
+
+
+.about-title-secondary {
+    display: block;
+
+    color: var(--secondary);
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.about-intro {
+    margin: 20px 0 10px;
+
+    color: #000000;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+}
+
+
+.about-description {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.about-highlights {
+    margin-top: 27px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.about-highlight {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+
+.about-highlight-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+.about-highlight h3 {
+    margin: 1px 0 5px;
+
+    color: #000000;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.about-highlight p {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.about-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 30px;
+
+    min-height: 48px;
+
+    padding: 0 24px;
+
+    border-radius: 30px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.about-button:hover {
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.about-button i {
+    transition: transform 0.3s ease;
+}
+
+
+.about-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .cream-about-section {
+    background: #111111;
+}
+
+
+body.dark-mode .about-intro,
+body.dark-mode .about-description,
+body.dark-mode .about-highlight h3,
+body.dark-mode .about-highlight p {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+body.rtl-mode .cream-about-section {
+    direction: rtl;
+}
+
+
+body.rtl-mode .about-content {
+    text-align: right;
+}
+
+
+body.rtl-mode .about-accent-card {
+    right: auto;
+
+    left: -25px;
+}
+
+
+body.rtl-mode .about-highlight {
+    direction: rtl;
+}
+
+
+body.rtl-mode .about-button i {
+    transform: rotate(180deg);
+}
+
+
+body.rtl-mode .about-button:hover i {
+    transform: rotate(180deg) translateX(4px);
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .cream-about-section {
+        padding: 75px 25px;
+    }
+
+    .about-container {
+        gap: 55px;
+    }
+
+    .about-main-image {
+        height: 500px;
+    }
+}
+
+
+/* =========================================================
+   IPAD / TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .cream-about-section {
+        padding: 70px 22px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .about-visual {
+        max-width: 620px;
+    }
+
+    .about-main-image {
+        height: 480px;
+    }
+
+    .about-content {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .about-title {
+        font-size: 35px;
+    }
+
+    body.rtl-mode .about-content {
+        text-align: right;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cream-about-section {
+        padding: 60px 18px;
+    }
+
+    .about-container {
+        gap: 38px;
+    }
+
+    .about-main-image {
+        height: 410px;
+
+        border-radius: 18px;
+    }
+
+    .about-accent-card {
+        right: 15px;
+
+        bottom: 20px;
+
+        width: 125px;
+
+        min-height: 105px;
+    }
+
+    body.rtl-mode .about-accent-card {
+        right: auto;
+
+        left: 15px;
+    }
+
+    .about-title {
+        font-size: 35px;
+    }
+
+    .about-intro {
+        font-size: 15px;
+    }
+
+    .about-description {
+        font-size: 13px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .cream-about-section {
+        padding: 50px 15px;
+    }
+
+    .about-main-image {
+        height: 350px;
+    }
+
+    .about-accent-card {
+        right: 10px;
+
+        bottom: 15px;
+
+        width: 112px;
+
+        min-height: 95px;
+
+        padding: 15px;
+    }
+
+    body.rtl-mode .about-accent-card {
+        right: auto;
+
+        left: 10px;
+    }
+
+    .about-accent-card strong {
+        font-size: 25px;
+    }
+
+    .about-accent-card span {
+        font-size: 10px;
+    }
+
+    .about-title {
+        font-size: 35px;
+    }
+
+    .about-tagline {
+        font-size: 20px;
+    }
+
+    .about-intro {
+        font-size: 14px;
+    }
+
+    .about-description {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .about-highlight-icon {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL IPHONE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .cream-about-section {
+        padding: 45px 12px;
+    }
+
+    .about-main-image {
+        height: 320px;
+    }
+
+    .about-title {
+        font-size: 35px;
+    }
+
+    .about-accent-card {
+        width: 105px;
+
+        min-height: 88px;
+    }
+}
+
+/* =========================================================
+   CREAM HAVEN
+   WHY CHOOSE US
+   ========================================================= */
+
+:root {
+    --primary: #a8408b;
+    --secondary: #ec6547;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.cream-why-section {
+    width: 100%;
+
+    padding: 70px 30px 80px;
+
+    background: #ffffff;
+
+    transition:
+        background-color 0.3s ease;
+}
+
+
+.cream-why-container {
+    width: 100%;
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING AREA
+   ========================================================= */
+
+.cream-why-heading {
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 0 auto 48px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.cream-why-tagline {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: normal;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.cream-why-heading h2 {
+    margin: 0;
+
+    font-size: 35px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+}
+
+
+.cream-why-heading h2 span {
+    color: var(--primary);
+}
+
+
+.cream-why-heading h2 strong {
+    color: var(--secondary);
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.cream-why-heading p {
+    max-width: 680px;
+
+    margin: 15px auto 0;
+
+    color: #000000;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SIX CARD GRID
+   ========================================================= */
+
+.cream-features-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.cream-feature-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 225px;
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(168, 64, 139, 0.20);
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px
+        rgba(168, 64, 139, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.cream-feature-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 16px 35px
+        rgba(168, 64, 139, 0.15);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.cream-feature-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 57%;
+
+    padding: 28px 10px 28px 28px;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.cream-feature-icon {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 7px 15px
+        rgba(168, 64, 139, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.cream-feature-card:hover
+.cream-feature-icon {
+    background: var(--secondary);
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CARD HEADING
+   ========================================================= */
+
+.cream-feature-content h3 {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   ACCENT LINE
+   ========================================================= */
+
+.cream-feature-line {
+    display: block;
+
+    width: 42px;
+
+    height: 3px;
+
+    margin: 9px 0;
+
+    border-radius: 5px;
+
+    background: var(--secondary);
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.cream-feature-content p {
+    max-width: 190px;
+
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.cream-feature-image {
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 48%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(168, 64, 139, 0.08);
+
+    clip-path:
+        ellipse(82% 90% at 100% 50%);
+}
+
+
+.cream-feature-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 255, 255, 0)
+        );
+
+    pointer-events: none;
+}
+
+
+.cream-feature-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.cream-feature-card:hover
+.cream-feature-image img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .cream-why-section {
+    background: #111111;
+}
+
+
+body.dark-mode .cream-feature-card {
+    background: #181818;
+
+    border-color:
+        rgba(168, 64, 139, 0.35);
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.30);
+}
+
+
+body.dark-mode
+.cream-feature-content h3 {
+    color: #ffffff;
+}
+
+
+body.dark-mode
+.cream-feature-content p {
+    color: #ffffff;
+}
+
+
+body.dark-mode
+.cream-why-heading p {
+    color: #ffffff;
+}
+
+
+body.dark-mode
+.cream-feature-image {
+    background:
+        rgba(168, 64, 139, 0.15);
+}
+
+
+body.dark-mode
+.cream-feature-image::after {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(24, 24, 24, 0.88),
+            rgba(24, 24, 24, 0)
+        );
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+body.rtl-mode
+.cream-why-section {
+    direction: rtl;
+}
+
+
+body.rtl-mode
+.cream-feature-content {
+    padding-left: 10px;
+
+    padding-right: 28px;
+}
+
+
+body.rtl-mode
+.cream-feature-image {
+    right: auto;
+
+    left: 0;
+
+    clip-path:
+        ellipse(82% 90% at 0% 50%);
+}
+
+
+body.rtl-mode
+.cream-feature-image::after {
+    background:
+        linear-gradient(
+            270deg,
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 255, 255, 0)
+        );
+}
+
+
+body.dark-mode.rtl-mode
+.cream-feature-image::after {
+    background:
+        linear-gradient(
+            270deg,
+            rgba(24, 24, 24, 0.88),
+            rgba(24, 24, 24, 0)
+        );
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .cream-why-section {
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+
+    .cream-features-grid {
+        gap: 18px;
+    }
+
+
+    .cream-feature-content {
+        padding-left: 22px;
+    }
+
+
+    body.rtl-mode
+    .cream-feature-content {
+        padding-right: 22px;
+
+        padding-left: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   IPAD / TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .cream-why-section {
+        padding: 65px 22px;
+    }
+
+
+    .cream-why-heading {
+        margin-bottom: 42px;
+    }
+
+
+    .cream-features-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    .cream-feature-card {
+        min-height: 220px;
+    }
+
+
+    .cream-feature-content {
+        width: 58%;
+
+        padding:
+            25px
+            10px
+            25px
+            22px;
+    }
+
+
+    body.rtl-mode
+    .cream-feature-content {
+        padding-left: 10px;
+
+        padding-right: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cream-why-section {
+        padding: 55px 18px;
+    }
+
+
+    .cream-why-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .cream-why-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .cream-why-heading p {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    .cream-features-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .cream-feature-card {
+        min-height: 210px;
+    }
+
+
+    .cream-feature-content {
+        width: 58%;
+
+        padding:
+            25px
+            10px
+            25px
+            22px;
+    }
+
+
+    body.rtl-mode
+    .cream-feature-content {
+        padding-left: 10px;
+
+        padding-right: 22px;
+    }
+
+
+    .cream-feature-icon {
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 16px;
+    }
+
+
+    .cream-feature-content h3 {
+        font-size: 16px;
+    }
+
+
+    .cream-feature-content p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE / SAMSUNG / IPHONE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .cream-why-section {
+        padding: 50px 15px;
+    }
+
+
+    .cream-why-tagline {
+        font-size: 20px;
+
+        letter-spacing: normal;
+    }
+
+
+    .cream-why-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .cream-why-heading p {
+        font-size: 12px;
+    }
+
+
+    .cream-features-grid {
+        gap: 14px;
+    }
+
+
+    .cream-feature-card {
+        min-height: 200px;
+
+        border-radius: 17px;
+    }
+
+
+    .cream-feature-content {
+        width: 60%;
+
+        padding:
+            22px
+            8px
+            22px
+            18px;
+    }
+
+
+    body.rtl-mode
+    .cream-feature-content {
+        padding-left: 8px;
+
+        padding-right: 18px;
+    }
+
+
+    .cream-feature-icon {
+        width: 43px;
+
+        height: 43px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .cream-feature-line {
+        width: 35px;
+
+        height: 3px;
+
+        margin: 7px 0;
+    }
+
+
+    .cream-feature-content h3 {
+        font-size: 15px;
+    }
+
+
+    .cream-feature-content p {
+        max-width: 160px;
+
+        font-size: 10px;
+
+        line-height: 1.55;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL IPHONE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .cream-why-section {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .cream-why-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .cream-feature-card {
+        min-height: 190px;
+    }
+
+
+    .cream-feature-content {
+        width: 61%;
+
+        padding-left: 15px;
+    }
+
+
+    body.rtl-mode
+    .cream-feature-content {
+        padding-right: 15px;
+
+        padding-left: 8px;
+    }
+
+
+    .cream-feature-image {
+        width: 45%;
+    }
+
+}
+
+/* =========================================================
+   CREAM HAVEN
+   CUSTOMER REVIEWS SECTION
+   ========================================================= */
+
+.cream-reviews-section {
+    width: 100%;
+
+    padding: 80px 30px;
+
+    background: #ffffff;
+
+    transition:
+        background-color 0.3s ease;
+}
+
+
+.cream-reviews-container {
+    width: 100%;
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.cream-reviews-heading {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.cream-reviews-tagline {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: normal;
+}
+
+
+.cream-reviews-heading h2 {
+    margin: 0;
+
+    font-size: 35px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+}
+
+
+.cream-reviews-heading h2 span {
+    color: var(--primary);
+}
+
+
+.cream-reviews-heading h2 strong {
+    color: var(--secondary);
+
+    font-weight: 800;
+}
+
+
+.cream-reviews-heading > p {
+    max-width: 680px;
+
+    margin: 16px auto 0;
+
+    color: #000000;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN REVIEW LAYOUT
+   ========================================================= */
+
+.cream-reviews-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 0.95fr);
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   FEATURED REVIEW
+   ========================================================= */
+
+.cream-featured-review {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding: 48px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+        0 18px 40px
+        rgba(168, 64, 139, 0.16);
+}
+
+
+/* =========================================================
+   QUOTE ICON
+   ========================================================= */
+
+.cream-review-quote-icon {
+    position: absolute;
+
+    top: 28px;
+
+    right: 35px;
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+
+.cream-featured-review::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    right: -70px;
+
+    bottom: -75px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.18);
+}
+
+
+.cream-featured-review::after {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 110px;
+
+    left: -45px;
+
+    top: -45px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   FEATURED STARS
+   ========================================================= */
+
+.cream-review-stars {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 22px;
+}
+
+
+.cream-review-stars i {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   FEATURED QUOTE
+   ========================================================= */
+
+.cream-featured-review blockquote {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 570px;
+
+    margin: 0 0 32px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FEATURED AUTHOR
+   ========================================================= */
+
+.cream-review-author {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.cream-review-avatar {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--primary);
+
+    font-size: 17px;
+
+    font-weight: 800;
+}
+
+
+.cream-review-author-info h3 {
+    margin: 0 0 3px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.cream-review-author-info p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    opacity: 0.88;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+   ========================================================= */
+
+.cream-review-decoration {
+    position: absolute;
+
+    left: 48px;
+
+    bottom: 35px;
+
+    width: 75px;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   REVIEW LIST
+   ========================================================= */
+
+.cream-review-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   SMALL REVIEW CARD
+   ========================================================= */
+
+.cream-review-card {
+    flex: 1;
+
+    padding: 24px 25px;
+
+    border: 1px solid
+        rgba(168, 64, 139, 0.18);
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 7px 22px
+        rgba(168, 64, 139, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.cream-review-card:hover {
+    transform: translateX(5px);
+
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 12px 28px
+        rgba(168, 64, 139, 0.12);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.cream-review-card-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   SMALL AVATAR
+   ========================================================= */
+
+.cream-small-avatar {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SMALL AUTHOR
+   ========================================================= */
+
+.cream-small-author {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.cream-small-author h3 {
+    margin: 0 0 3px;
+
+    color: #000000;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.cream-small-author span {
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SMALL STARS
+   ========================================================= */
+
+.cream-small-stars {
+    display: flex;
+
+    flex-shrink: 0;
+
+    gap: 3px;
+}
+
+
+.cream-small-stars i {
+    color: var(--secondary);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+   ========================================================= */
+
+.cream-review-text {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BOTTOM MESSAGE
+   ========================================================= */
+
+.cream-review-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 45px;
+}
+
+
+.cream-review-bottom-line {
+    width: 65px;
+
+    height: 1px;
+
+    background: var(--secondary);
+
+    opacity: 0.7;
+}
+
+
+.cream-review-bottom p {
+    margin: 0;
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .cream-reviews-section {
+    background: #111111;
+}
+
+
+body.dark-mode
+.cream-reviews-heading > p {
+    color: #ffffff;
+}
+
+
+body.dark-mode
+.cream-review-card {
+    background: #181818;
+
+    border-color:
+        rgba(168, 64, 139, 0.35);
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.28);
+}
+
+
+body.dark-mode
+.cream-small-author h3 {
+    color: #ffffff;
+}
+
+
+body.dark-mode
+.cream-review-text {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+body.rtl-mode .cream-reviews-section {
+    direction: rtl;
+}
+
+
+body.rtl-mode
+.cream-review-quote-icon {
+    right: auto;
+
+    left: 35px;
+}
+
+
+body.rtl-mode
+.cream-review-decoration {
+    left: auto;
+
+    right: 48px;
+}
+
+
+body.rtl-mode
+.cream-review-card:hover {
+    transform: translateX(-5px);
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .cream-reviews-section {
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+
+    .cream-featured-review {
+        padding: 40px;
+    }
+
+
+    .cream-featured-review blockquote {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / IPAD
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .cream-reviews-section {
+        padding: 65px 22px;
+    }
+
+
+    .cream-reviews-heading {
+        margin-bottom: 42px;
+    }
+
+
+    .cream-reviews-layout {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .cream-featured-review {
+        min-height: 360px;
+    }
+
+
+    .cream-review-list {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 14px;
+    }
+
+
+    .cream-review-card {
+        padding: 20px;
+    }
+
+
+    .cream-review-card-top {
+        flex-wrap: wrap;
+    }
+
+
+    .cream-small-stars {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cream-reviews-section {
+        padding: 55px 18px;
+    }
+
+
+    .cream-reviews-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .cream-reviews-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .cream-reviews-heading > p {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    .cream-featured-review {
+        min-height: auto;
+
+        padding: 35px 25px;
+
+        border-radius: 21px;
+    }
+
+
+    .cream-review-quote-icon {
+        top: 20px;
+
+        right: 22px;
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 19px;
+    }
+
+
+    .cream-featured-review blockquote {
+        margin-bottom: 25px;
+
+        font-size: 17px;
+
+        line-height: 1.65;
+    }
+
+
+    .cream-review-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cream-review-card {
+        padding: 21px;
+    }
+
+
+    .cream-review-card-top {
+        flex-wrap: nowrap;
+    }
+
+
+    .cream-small-stars {
+        width: auto;
+    }
+
+
+    .cream-review-bottom {
+        gap: 12px;
+
+        margin-top: 35px;
+    }
+
+
+    .cream-review-bottom-line {
+        width: 35px;
+    }
+
+
+    .cream-review-bottom p {
+        font-size: 11px;
+    }
+
+
+    body.rtl-mode
+    .cream-review-quote-icon {
+        right: auto;
+
+        left: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE / SAMSUNG / IPHONE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .cream-reviews-section {
+        padding: 50px 15px;
+    }
+
+
+    .cream-reviews-tagline {
+        font-size: 20px;
+
+        letter-spacing: normal;
+    }
+
+
+    .cream-reviews-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .cream-featured-review {
+        padding: 32px 20px;
+    }
+
+
+    .cream-featured-review blockquote {
+        font-size: 16px;
+    }
+
+
+    .cream-review-stars i {
+        font-size: 13px;
+    }
+
+
+    .cream-review-card {
+        padding: 19px;
+    }
+
+
+    .cream-review-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .cream-review-bottom-line {
+        width: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL IPHONE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .cream-reviews-section {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .cream-featured-review {
+        padding: 28px 18px;
+    }
+
+
+    .cream-featured-review blockquote {
+        font-size: 15px;
+    }
+
+
+    .cream-review-card {
+        padding: 17px;
+    }
+
+
+    .cream-small-avatar {
+        width: 38px;
+
+        height: 38px;
+    }
+
+}
+
+/* =========================================
+   CUSTOMER REVIEWS
+========================================= */
+
+.customer-reviews {
+    width: 100%;
+    padding: 90px 6%;
+    background: #ffffff;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* Heading */
+
+.reviews-heading {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-tagline {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.reviews-heading h2 {
+    margin: 0 0 15px;
+    color: var(--secondary);
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.reviews-heading p {
+    margin: 0;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Reviews Grid */
+
+.reviews-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* Review Card */
+
+.review-card {
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid var(--primary);
+    border-radius: 18px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(168, 64, 139, 0.16);
+}
+
+
+/* Customer */
+
+.review-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.customer-image {
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--secondary);
+}
+
+.customer-info h3 {
+    margin: 0 0 5px;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.customer-info span {
+    color: #000000;
+    font-size: 14px;
+}
+
+
+/* Stars */
+
+.review-stars {
+    margin-bottom: 15px;
+    color: var(--secondary);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+
+/* Review Text */
+
+.review-text {
+    margin: 0;
+    color: #000000;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .customer-reviews {
+    background: #000000;
+}
+
+body.dark-mode .reviews-heading h2{
+    color: var(--secondary);
+}
+body.dark-mode .reviews-heading p,
+body.dark-mode .customer-info span,
+body.dark-mode .review-text {
+    color: #ffffff;
+}
+
+body.dark-mode .customer-info h3{
+    color: var(--primary);
+}
+
+body.dark-mode .review-card {
+    background: #000000;
+    border-color: var(--primary);
+}
+
+body.dark-mode .review-card:hover {
+    box-shadow: 0 15px 35px rgba(168, 64, 139, 0.25);
+}
+
+
+/* =========================================
+   RTL
+========================================= */
+
+html[dir="rtl"] .review-top {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .customer-info {
+    text-align: right;
+}
+
+html[dir="rtl"] .review-text {
+    text-align: right;
+}
+
+
+/* =========================================
+   LARGE TABLET / iPAD
+========================================= */
+
+@media (max-width: 991px) {
+
+    .customer-reviews {
+        padding: 75px 5%;
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-heading {
+        margin-bottom: 45px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .customer-reviews {
+        padding: 65px 5%;
+    }
+
+    .reviews-heading h2 {
+        font-size: 35px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE / iPHONE / SAMSUNG
+========================================= */
+
+@media (max-width: 480px) {
+
+    .customer-reviews {
+        padding: 55px 18px;
+    }
+
+    .reviews-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-tagline {
+        font-size: 20px;
+    }
+
+    .reviews-heading h2 {
+        font-size: 35px;
+    }
+
+    .reviews-heading p {
+        font-size: 15px;
+    }
+
+    .review-card {
+        padding: 22px;
+        border-radius: 15px;
+    }
+
+    .customer-image {
+        width: 60px;
+        height: 60px;
+        flex-basis: 60px;
+    }
+
+    .customer-info h3 {
+        font-size: 17px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+}
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid rgba(168, 64, 139, 0.15);
+    padding: 18px 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-bottom-inner {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-copyright {
+    margin: 0;
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.footer-copyright span {
+    color: #a8408b;
+    font-weight: 700;
+}
+
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-legal-links a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover,
+.footer-legal-links a:focus {
+    color: #ec6547;
+}
+
+.footer-legal-links a:focus-visible {
+    outline: 2px solid #a8408b;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .footer-bottom {
+    background: #171717;
+    border-top-color: rgba(236, 100, 71, 0.25);
+}
+
+body.dark-mode .footer-copyright,
+body.dark-mode .footer-legal-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .footer-copyright span {
+    color: #a8408b;
+}
+
+body.dark-mode .footer-legal-links a:hover,
+body.dark-mode .footer-legal-links a:focus {
+    color: #ec6547;
+}
+
+/* =========================
+   RTL SUPPORT
+========================= */
+
+html[dir="rtl"] .footer-bottom-inner {
+    direction: rtl;
+}
+
+html[dir="rtl"] .footer-legal-links {
+    justify-content: flex-start;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .footer-bottom {
+        padding: 16px 0;
+    }
+
+    .footer-bottom-inner {
+        width: min(92%, 600px);
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-legal-links {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    html[dir="rtl"] .footer-legal-links {
+        justify-content: center;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .footer-bottom {
+        padding: 15px 0;
+    }
+
+    .footer-bottom-inner {
+        width: 90%;
+        gap: 8px;
+    }
+
+    .footer-copyright {
+        font-size: 13px;
+    }
+
+    .footer-legal-links {
+        width: 100%;
+        gap: 8px 16px;
+    }
+
+    .footer-legal-links a {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+
+    .footer-legal-links {
+        gap: 7px 12px;
+    }
+
+    .footer-legal-links a {
+        font-size: 12px;
+    }
+}
+
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.footer-legal-links a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 14px;
+    transition: color 0.3s ease;
+}
+
+/* Vertical separator */
+.footer-legal-links a + a {
+    border-left: 1px solid rgba(168, 64, 139, 0.35);
+}
+
+/* Hover */
+.footer-legal-links a:hover,
+.footer-legal-links a:focus {
+    color: #ec6547;
+}
+
+/* Dark Mode */
+body.dark-mode .footer-legal-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .footer-legal-links a + a {
+    border-left-color: rgba(236, 100, 71, 0.4);
+}
+
+body.dark-mode .footer-legal-links a:hover,
+body.dark-mode .footer-legal-links a:focus {
+    color: #ec6547;
+}
+
+/* RTL */
+html[dir="rtl"] .footer-legal-links a + a {
+    border-left: none;
+    border-right: 1px solid rgba(168, 64, 139, 0.35);
+}
+
+html[dir="rtl"] body.dark-mode .footer-legal-links a + a {
+    border-right-color: rgba(236, 100, 71, 0.4);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .footer-legal-links a {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+}
+
+/* =========================
+   ROYAL CREAM CTA SECTION
+========================= */
+
+.royal-cta-section {
+    position: relative;
+    width: 100%;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+background-image: url("images/ctta5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    isolation: isolate;
+}
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.royal-cta-overlay {
+     position: absolute;
+    inset: 0;
+    
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.62)
+        );
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.royal-cta-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.royal-cta-content {
+   max-width: 800px;
+    margin: 0 auto;
+    padding: 55px 0;
+    text-align: center;
+}
+
+.royal-cta-tagline {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: var(--primary);
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.royal-cta-content h2 {
+    margin: 0 0 16px;
+
+    color: var(--secondary);
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.royal-cta-content p {
+    max-width: 680px;
+    margin: 0 auto 28px;
+
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.royal-cta-actions {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.royal-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 12px 22px;
+
+    border-radius: 6px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.royal-cta-btn span {
+    font-size: 19px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.royal-cta-btn:hover span {
+    transform: translateX(4px);
+}
+
+/* Primary button */
+
+.royal-cta-primary {
+    background: #a8408b;
+    color: #ffffff;
+    border: 1px solid #a8408b;
+}
+
+.royal-cta-primary:hover {
+    background: #ec6547;
+    border-color: #ec6547;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Secondary button */
+
+.royal-cta-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.royal-cta-secondary:hover {
+    background: #ec6547;
+    border-color: #ec6547;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   FOCUS ACCESSIBILITY
+========================= */
+
+.royal-cta-btn:focus-visible {
+    outline: 2px solid #ec6547;
+    outline-offset: 4px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .royal-cta-section {
+    background-position: center;
+}
+
+body.dark-mode .royal-cta-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.84) 0%,
+            rgba(0, 0, 0, 0.70) 45%,
+            rgba(0, 0, 0, 0.48) 100%
+        );
+}
+
+body.dark-mode .royal-cta-tagline {
+    color: var(--primary);
+}
+
+body.dark-mode .royal-cta-content h2{
+    color: var(--secondary);
+}
+
+body.dark-mode .royal-cta-content p {
+    color: #ffffff;
+}
+
+/* =========================
+   RTL SUPPORT
+========================= */
+
+html[dir="rtl"] .royal-cta-content {
+    text-align: center;
+}
+
+
+html[dir="rtl"] .royal-cta-actions {
+    justify-content: center;
+}
+
+html[dir="rtl"] .royal-cta-overlay {
+    background:
+        linear-gradient(
+            270deg,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(0, 0, 0, 0.62) 45%,
+            rgba(0, 0, 0, 0.38) 100%
+        );
+}
+
+html[dir="rtl"] .royal-cta-btn:hover span {
+    transform: translateX(-4px);
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+    .royal-cta-section {
+        min-height: 340px;
+        background-position: center;
+    }
+
+    .royal-cta-content {
+        max-width: 650px;
+        padding: 48px 0;
+    }
+
+    .royal-cta-content h2 {
+        font-size: 35px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .royal-cta-section {
+        min-height: 330px;
+        background-position: center;
+    }
+
+    .royal-cta-container {
+        width: 90%;
+    }
+
+    .royal-cta-content {
+        max-width: 100%;
+        padding: 45px 0;
+        text-align: center;
+    }
+
+    .royal-cta-tagline {
+        font-size: 25px;
+    }
+
+    .royal-cta-content h2 {
+        font-size: 32px;
+    }
+
+    .royal-cta-content p {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+    }
+
+    .royal-cta-actions {
+        justify-content: center;
+    }
+
+    html[dir="rtl"] .royal-cta-content {
+        text-align: center;
+    }
+
+    html[dir="rtl"] .royal-cta-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.70),
+                rgba(0, 0, 0, 0.70)
+            );
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .royal-cta-section {
+        min-height: 370px;
+        background-position: center;
+    }
+
+    .royal-cta-content {
+        padding: 42px 0;
+    }
+
+    .royal-cta-tagline {
+        margin-bottom: 10px;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .royal-cta-content h2 {
+        margin-bottom: 14px;
+        font-size: 29px;
+        line-height: 1.25;
+    }
+
+    .royal-cta-content p {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .royal-cta-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .royal-cta-btn {
+        width: min(100%, 280px);
+        min-height: 46px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .royal-cta-section {
+        min-height: 390px;
+    }
+
+    .royal-cta-content {
+        padding: 38px 0;
+    }
+
+    .royal-cta-tagline {
+        font-size: 18px;
+    }
+
+    .royal-cta-content h2 {
+        font-size: 26px;
+    }
+
+    .royal-cta-content p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   CREAM HAVEN - DARK MODE FOOTER FIX
+   Removes unwanted orange space/bars
+========================================================= */
+
+/* Main footer */
+body.dark-mode .main-footer {
+    position: relative;
+    background: #111111 !important;
+    margin: 0 !important;
+    padding-top: 30px !important;
+    padding-bottom: 15px !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove any decorative orange bars */
+body.dark-mode .main-footer::before,
+body.dark-mode .main-footer::after {
+    display: none !important;
+    content: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Footer container */
+body.dark-mode .footer-container {
+    background: #111111 !important;
+    margin: 0 auto !important;
+    padding-bottom: 0 !important;
+}
+
+/* Footer bottom */
+body.dark-mode .footer-bottom {
+    background: #111111 !important;
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    border-top: 1px solid rgba(168, 64, 139, 0.25) !important;
+}
+
+/* Footer bottom inner */
+body.dark-mode .footer-bottom-inner {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* =========================================
+   LIGHT MODE - REDUCE SPACE ABOVE FOOTER BOTTOM
+========================================= */
+
+.main-footer {
+    padding-bottom: 10px !important;
+    margin-bottom: 0 !important;
+}
+
+.footer-container {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.footer-bottom {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.footer-bottom-inner {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Main Footer */
+.main-footer{
+    background: #fff;
+        padding: 60px 0;   /* Top | Left-Right | Bottom */
+}
+
+/* Footer Columns */
+.footer-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    padding-bottom: 20px;
+}
+
+/* Bottom copyright section (if you have one) */
+.footer-bottom{
+    border-top: 1px solid #e8e8e8;
+    margin-top: 50px;      /* Space above the line */
+    padding-top: 30px;     /* Space below the line */
+    padding-bottom: 20px;
+}
+
+.contact-icon i{
+    color: var(--secondary);
+}
+
+/* =========================================================
+   CREAM HAVEN HERO BANNER
+   UNIQUE CLASS SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   BRAND VARIABLES
+========================================================= */
+
+:root {
+    --primary: #a8408b;
+    --secondary: #ec6547;
+}
+
+
+/* =========================================================
+   HERO MAIN CONTAINER
+========================================================= */
+
+.haven-home-banner {
+    position: relative;
+
+    width: 100%;
+    
+ min-height: calc(100svh - var(--header-height, 80px));
+
+    height: calc(100svh - var(--header-height, 80px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background: var(--primary);
+}
+
+
+.haven-banner-background {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        url("images/banner.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.02);
+
+    animation:
+        havenBannerImageEnter 1.2s ease-out both;
+
+    transition:
+        transform 8s ease;
+}
+
+
+/* =========================================================
+   SUBTLE IMAGE MOVEMENT
+========================================================= */
+
+.haven-home-banner:hover
+.haven-banner-background {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   LIGHT MODE OVERLAY
+========================================================= */
+
+.haven-banner-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.68) 0%,
+            rgba(0, 0, 0, 0.50) 45%,
+            rgba(0, 0, 0, 0.30) 100%
+        );
+
+    transition:
+        background 0.5s ease;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.haven-banner-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(900px, 90%);
+
+    margin: 0 auto;
+
+    padding: 40px 0;
+
+    text-align: center;
+
+    animation:
+        havenBannerContentEnter 1s ease-out both;
+}
+
+
+/* =========================================================
+   TAGLINE
+   PRIMARY COLOUR
+========================================================= */
+
+.haven-banner-tagline {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: white;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    font-weight: bold;
+
+    word-spacing: 2px;
+
+    animation:
+        havenBannerTextUp 0.8s ease 0.15s both;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   SECONDARY COLOUR
+========================================================= */
+
+.haven-banner-content h1 {
+    max-width: 850px;
+
+    margin: 0 auto 20px;
+
+    color: var(--secondary);
+
+    font-size: 40px;
+
+    line-height: 1.18;
+
+    font-weight: bold;
+    
+    word-spacing: 2px;
+
+    animation:
+        havenBannerTextUp 0.8s ease 0.25s both;
+}
+
+
+/*
+   Heading span also remains secondary.
+*/
+
+.haven-banner-content h1 span {
+    color: var(--secondary);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.haven-banner-description {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    font-weight: 400;
+
+    animation:
+        havenBannerTextUp 0.8s ease 0.35s both;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.haven-banner-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    animation:
+        havenBannerTextUp 0.8s ease 0.45s both;
+}
+
+
+/* =========================================================
+   COMMON BUTTON SETTINGS
+========================================================= */
+
+.haven-banner-primary-btn,
+.haven-banner-secondary-btn {
+
+    width: 180px;
+
+    min-height: 50px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.haven-banner-primary-btn {
+
+    background-color: var(--primary);
+
+    border: 2px solid var(--primary);
+    
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON HOVER
+========================================================= */
+
+.haven-banner-primary-btn:hover {
+
+    background-color: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(236, 101, 71, 0.28);
+}
+
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.haven-banner-secondary-btn {
+
+    background-color: transparent;
+
+    border: 2px solid var(--secondary);
+
+     
+    border-radius: 30px;
+
+    color: white;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON HOVER
+========================================================= */
+
+.haven-banner-secondary-btn:hover {
+
+    background-color: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(236, 101, 71, 0.25);
+}
+
+
+/* =========================================================
+   IMAGE ENTRY ANIMATION
+========================================================= */
+
+@keyframes havenBannerImageEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(1.08);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1.02);
+    }
+}
+
+
+/* =========================================================
+   CONTENT ENTRY ANIMATION
+========================================================= */
+
+@keyframes havenBannerContentEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TEXT ANIMATION
+========================================================= */
+
+@keyframes havenBannerTextUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+/*
+   IMPORTANT:
+
+   The background image is NOT changed.
+
+   Only the overlay becomes slightly darker.
+*/
+
+body.dark-mode .haven-banner-overlay {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.76) 0%,
+            rgba(0, 0, 0, 0.59) 45%,
+            rgba(0, 0, 0, 0.40) 100%
+        );
+}
+
+
+/*
+   Content stays on the same image.
+*/
+
+body.dark-mode .haven-banner-content h1 {
+
+    color: var(--primary);
+}
+
+
+body.dark-mode
+.haven-banner-tagline {
+
+    color: var(--secondary);
+}
+
+
+/*
+   Keep buttons visible in dark mode.
+*/
+
+body.dark-mode
+.haven-banner-primary-btn {
+
+    background-color: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+}
+
+
+body.dark-mode
+.haven-banner-secondary-btn {
+
+    background-color: transparent;
+
+    border-color: var(--secondary);
+
+    color: var(--secondary);
+}
+
+
+body.dark-mode
+.haven-banner-primary-btn:hover {
+
+    background-color: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #ffffff;
+}
+
+
+body.dark-mode
+.haven-banner-secondary-btn:hover {
+
+    background-color: var(--secondary);
+
+    border-color: var(--secondary);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RTL SUPPORT
+========================================================= */
+
+html[dir="rtl"]
+.haven-home-banner {
+
+    direction: rtl;
+}
+
+
+html[dir="rtl"]
+.haven-banner-primary-btn i {
+
+    transform:
+        rotate(180deg);
+}
+
+
+html[dir="rtl"]
+.haven-banner-primary-btn:hover i {
+
+    transform:
+        rotate(180deg)
+        translateX(5px);
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .haven-home-banner {
+
+        min-height: 600px;
+    }
+
+
+    .haven-banner-content {
+
+        width: 88%;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP / LARGE TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .haven-home-banner {
+
+        min-height: 580px;
+    }
+
+
+    .haven-banner-content {
+
+        width: 90%;
+    }
+
+
+    .haven-banner-description {
+
+        max-width: 620px;
+    }
+}
+
+
+/* =========================================================
+   IPAD / TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .haven-home-banner {
+
+        min-height: 560px;
+    }
+
+
+    .haven-banner-background {
+
+        background-position:
+            center center;
+    }
+
+
+    /*
+       More balanced overlay for tablet.
+    */
+
+    .haven-banner-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.48) 0%,
+                rgba(0, 0, 0, 0.72) 100%
+            );
+    }
+
+
+    .haven-banner-content {
+
+        width: 88%;
+
+        padding: 35px 0;
+    }
+
+
+    .haven-banner-content h1 {
+
+        font-size: 35px;
+
+        line-height: 1.2;
+    }
+
+
+    .haven-banner-description {
+
+        font-size: 15px;
+
+        line-height: 1.75;
+    }
+
+
+    .haven-banner-actions {
+
+        gap: 12px;
+    }
+
+
+    .haven-banner-primary-btn,
+    .haven-banner-secondary-btn {
+
+        width: 170px;
+
+        min-height: 49px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE / SAMSUNG
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .haven-home-banner {
+
+        min-height: 535px;
+    }
+
+
+    .haven-banner-content {
+
+        width: 90%;
+
+        padding: 30px 0;
+    }
+
+
+    .haven-banner-tagline {
+
+        font-size: 20px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .haven-banner-content h1 {
+
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        margin-bottom: 17px;
+    }
+
+
+    .haven-banner-description {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 0;
+    }
+
+
+    /*
+       Stack buttons vertically on mobile.
+    */
+
+    .haven-banner-actions {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+
+        margin-top: 25px;
+    }
+
+
+    .haven-banner-primary-btn,
+    .haven-banner-secondary-btn {
+
+        width: 100%;
+
+        max-width: 280px;
+
+        min-height: 48px;
+    }
+}
+
+
+/* =========================================================
+   IPHONE / SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .haven-home-banner {
+
+        min-height: 510px;
+    }
+
+
+    .haven-banner-content {
+
+        width: 90%;
+    }
+
+
+    .haven-banner-tagline {
+
+        font-size: 18px;
+    }
+
+
+    .haven-banner-content h1 {
+
+        font-size: 28px;
+
+        line-height: 1.18;
+    }
+
+
+    .haven-banner-description {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .haven-banner-primary-btn,
+    .haven-banner-secondary-btn {
+
+        max-width: 260px;
+
+        min-height: 46px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .haven-home-banner {
+
+        min-height: 490px;
+    }
+
+
+    .haven-banner-tagline {
+
+        font-size: 17px;
+    }
+
+
+    .haven-banner-content h1 {
+
+        font-size: 26px;
+    }
+
+
+    .haven-banner-description {
+
+        font-size: 12.5px;
+    }
+}
+
+/* =========================================
+   CREAM HAVEN - STICKY HEADER
+   ========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+/* =========================================================
+   HAMBURGER MENU
+   ========================================================= */
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+
+/* =========================================================
+   MEDIA QUERY — HAMBURGER VISIBLE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .mobile-menu-toggle {
+        display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        border: 1px solid #a8408b;
+        border-radius: 8px;
+
+        background: #ffffff;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-menu-toggle span {
+        display: block;
+
+        width: 20px;
+        height: 2px;
+
+        background: #a8408b;
+
+        border-radius: 3px;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .main-navigation {
+        display: none;
+    }
+
+
+    /* Show navigation when hamburger is clicked */
+
+    .main-navigation.mobile-open {
+        display: flex;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+
+        padding: 15px;
+
+        background: #ffffff;
+
+        z-index: 999;
+    }
+}

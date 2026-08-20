@@ -1,0 +1,1432 @@
+/* =========================================
+   CREAM HAVEN LOGIN PAGE
+   ========================================= */
+
+:root {
+    --primary: #a8408b;
+    --secondary: #ec6547;
+
+    --white: #ffffff;
+    --black: #111111;
+
+    --border-light: rgba(255, 255, 255, 0.30);
+    --glass-light: rgba(35, 20, 27, 0.68);
+
+    --input-bg: rgba(255, 255, 255, 0.95);
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.ch-login-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168, 64, 139, 0.34),
+            rgba(236, 101, 71, 0.22)
+        ),
+        url("images/login\ background\ iimage.jfif")
+        center center / cover no-repeat;
+}
+
+
+/* =========================================
+   BACKGROUND OVERLAY
+   ========================================= */
+
+.ch-login-page::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(17, 17, 17, 0.57),
+            rgba(168, 64, 139, 0.18),
+            rgba(236, 101, 71, 0.12),
+            rgba(17, 17, 17, 0.45)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   LOGIN WRAPPER
+   ========================================= */
+
+.ch-login-wrapper {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 510px;
+
+    max-height: calc(100vh - 48px);
+    max-height: calc(100dvh - 48px);
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================================
+   LOGIN CARD
+   ========================================= */
+
+.ch-login-card {
+    position: relative;
+
+    width: 100%;
+
+    padding: 27px 38px 22px;
+
+    border: 1px solid var(--border-light);
+    border-radius: 22px;
+
+    background: white;
+
+    box-shadow:
+        0 22px 55px rgba(17, 17, 17, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+    color: var(--white);
+}
+
+.ch-login-card::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================
+   CARD CONTROLS
+   ========================================= */
+
+.ch-card-controls {
+  position: absolute;
+
+    /* Same vertical level as Cream Haven text */
+    top: 37px;
+
+    /* Right edge alignment */
+    right: 28px;
+
+    z-index: 50;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    height: 34px;
+}
+
+.ch-auth-control {
+     width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(17, 17, 17, 0.25);
+    border-radius: 50%;
+
+    background: rgba(17, 17, 17, 0.04);
+
+    color: #111111;
+
+    opacity: 1;
+    visibility: visible;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.ch-auth-control:hover {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+.ch-rtl-icon {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.ch-theme-icon {
+    width: 16px;
+    height: 16px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ch-sun-icon {
+    display: none;
+}
+
+.ch-moon-icon {
+    display: block;
+}
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+html.dark-mode .ch-auth-control {
+    background: rgba(255, 255, 255, 0.07);
+
+    border-color: rgba(255, 255, 255, 0.30);
+
+    color: #ffffff;
+}
+
+html.dark-mode .ch-sun-icon {
+    display: block;
+}
+
+html.dark-mode .ch-moon-icon {
+    display: none;
+}
+
+
+/* =========================================
+   RTL POSITION
+   ========================================= */
+
+html[dir="rtl"] .ch-card-controls {
+    right: auto;
+    left: 28px;
+}
+/* =========================================
+   BRAND
+   ========================================= */
+
+.ch-login-brand {
+    text-align: center;
+
+    margin-bottom: 12px;
+}
+
+
+/* Logo wrapper */
+
+.ch-login-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    line-height: 1;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    min-width: 0;
+}
+
+
+/* Logo Image */
+
+.brand-logo img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    transition: transform var(--transition);
+}
+
+
+/* Small hover effect */
+
+.brand-logo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   LOGO TEXT
+   ========================================================= */
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1;
+}
+
+
+/* Logo Name */
+
+.brand-text h1 {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* Cream */
+
+.brand-text h1 span {
+    color: var(--primary);
+}
+
+
+/* Haven */
+
+.brand-text h1 strong {
+    color: var(--secondary);
+
+    font-weight: 800;
+}
+
+
+/* Tagline */
+
+.brand-text p {
+    margin-top: 5px;
+  margin-left: 18px;
+    color: var(--primary);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.ch-login-heading {
+    text-align: center;
+
+    margin-bottom: 18px;
+}
+
+.ch-login-heading h1 {
+    margin: 0 0 6px;
+
+    font-size: 27px;
+    font-weight: 750;
+
+    line-height: 1.2;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.ch-login-form {
+    width: 100%;
+}
+
+.ch-form-group {
+    width: 100%;
+
+    margin-bottom: 13px;
+}
+
+.ch-form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.ch-input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.ch-input-wrapper input {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 9px;
+
+    outline: none;
+
+    background: var(--input-bg);
+
+    color: var(--black);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.ch-input-wrapper input::placeholder {
+    color: rgba(17, 17, 17, 0.52);
+}
+
+.ch-input-wrapper input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(168, 64, 139, 0.20);
+}
+
+.ch-input-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 14px;
+
+    width: 17px;
+    height: 17px;
+
+    transform: translateY(-50%);
+
+    fill: none;
+
+    stroke: var(--primary);
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   PASSWORD EYE
+   ========================================= */
+
+.ch-password-toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    cursor: pointer;
+}
+
+.ch-password-toggle svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+
+    stroke: currentColor;
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ch-eye-closed {
+    display: none;
+}
+
+
+/* =========================================
+   REMEMBER / FORGOT
+   ========================================= */
+
+.ch-login-options {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin: 1px 0 14px;
+}
+
+.ch-remember {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.ch-remember input {
+    position: absolute;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ch-custom-checkbox {
+    width: 14px;
+    height: 14px;
+
+    display: inline-block;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+
+    position: relative;
+
+    transition: var(--transition);
+}
+
+.ch-remember input:checked + .ch-custom-checkbox {
+    border-color: var(--primary);
+
+    background: var(--primary);
+}
+
+.ch-remember input:checked + .ch-custom-checkbox::after {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: 1px;
+
+    width: 4px;
+    height: 8px;
+
+    border: solid var(--white);
+    border-width: 0 1.5px 1.5px 0;
+
+    transform: rotate(45deg);
+}
+
+.ch-forgot-link {
+    color: var(--secondary);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color var(--transition);
+}
+
+.ch-forgot-link:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================
+   SIGN IN BUTTON
+   ========================================= */
+
+.ch-login-btn {
+    width: 100%;
+    height: 42px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(168, 64, 139, 0.25);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        filter var(--transition);
+}
+
+.ch-login-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(168, 64, 139, 0.32);
+
+    filter: brightness(1.04);
+}
+
+.ch-login-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.ch-login-divider {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 14px 0 12px;
+}
+
+.ch-login-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.ch-login-divider strong {
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SOCIAL LOGIN
+   ========================================= */
+
+.ch-social-login {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.ch-social-btn {
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.ch-social-btn:hover {
+    background: rgba(168, 64, 139, 0.38);
+
+    border-color: rgba(255, 255, 255, 0.52);
+
+    transform: translateY(-2px);
+}
+
+.ch-social-btn svg {
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+}
+
+.ch-google-logo,
+.ch-apple-logo,
+.ch-facebook-logo {
+    fill: currentColor;
+}
+
+
+/* =========================================
+   SIGN UP
+   ========================================= */
+
+.ch-signup-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-top: 13px;
+
+    color: black;
+
+    font-size: 13px;
+}
+
+.ch-signup-row a {
+    color: var(--secondary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color var(--transition);
+}
+
+.ch-signup-row a:hover {
+    color: var(--primary);
+}
+
+.ch-login-card {
+    position: relative;
+
+    width: 100%;
+
+    padding: 27px 38px 22px;
+
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 22px;
+
+    /* LIGHT MODE */
+    background: #ffffff;
+
+    box-shadow:
+        0 22px 55px rgba(17, 17, 17, 0.30);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+    color: #111111;
+}
+
+/* =========================================
+   LIGHT MODE CARD
+   ========================================= */
+
+.ch-login-card .ch-login-tagline {
+    color: rgba(17, 17, 17, 0.65);
+}
+
+.ch-login-card .ch-login-heading p {
+    color: rgba(17, 17, 17, 0.72);
+}
+
+.ch-login-card .ch-form-group label {
+    color: #111111;
+}
+
+.ch-login-card .ch-remember {
+    color: rgba(17, 17, 17, 0.78);
+}
+
+.ch-login-card .ch-login-divider span {
+    background: rgba(17, 17, 17, 0.16);
+}
+
+.ch-login-card .ch-login-divider strong {
+    color: rgba(17, 17, 17, 0.55);
+}
+
+.ch-login-card .ch-signup-row {
+    color: rgba(17, 17, 17, 0.72);
+}
+
+/* =========================================
+   DARK MODE CARD
+   ========================================= */
+
+html.dark-mode .ch-login-card {
+    background: #111111;
+
+    border-color: rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.55);
+
+    color: #ffffff;
+}
+
+
+/* Dark Mode Text */
+
+html.dark-mode .ch-login-card .ch-login-tagline {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+html.dark-mode .ch-login-card .ch-login-heading p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+html.dark-mode .ch-login-card .ch-form-group label {
+    color: #ffffff;
+}
+
+html.dark-mode .ch-login-card .ch-remember {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+html.dark-mode .ch-login-card .ch-login-divider span {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+html.dark-mode .ch-login-card .ch-login-divider strong {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+html.dark-mode .ch-login-card .ch-signup-row {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+/* =========================================
+   INPUTS — BOTH MODES
+   ========================================= */
+
+.ch-input-wrapper input {
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color: rgba(17, 17, 17, 0.18);
+}
+
+.ch-input-wrapper input::placeholder {
+    color: rgba(17, 17, 17, 0.52);
+}
+
+.ch-input-wrapper input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(168, 64, 139, 0.18);
+}
+
+
+/* Dark Mode Inputs */
+
+html.dark-mode .ch-input-wrapper input {
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color: rgba(255, 255, 255, 0.30);
+}
+
+html.dark-mode .ch-input-wrapper input::placeholder {
+    color: rgba(17, 17, 17, 0.52);
+}
+
+/* =========================================
+   SOCIAL BUTTONS
+   ========================================= */
+
+.ch-social-btn {
+    background: rgba(17, 17, 17, 0.035);
+
+    color: #111111;
+
+    border-color: rgba(17, 17, 17, 0.18);
+}
+
+.ch-social-btn:hover {
+    background: rgba(168, 64, 139, 0.12);
+
+    border-color: var(--primary);
+}
+
+
+/* Dark Mode */
+
+html.dark-mode .ch-social-btn {
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+html.dark-mode .ch-social-btn:hover {
+    background: rgba(168, 64, 139, 0.28);
+
+    border-color: var(--primary);
+}
+
+
+
+
+/* =========================================
+   REMEMBER ME CHECKBOX
+   ========================================= */
+
+.ch-remember {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #111111;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* Hide native checkbox */
+
+.ch-remember input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+    padding: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+}
+
+
+/* Visible checkbox */
+
+.ch-custom-checkbox {
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+
+    display: inline-flex;
+
+    flex: 0 0 15px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid #555555;
+
+    border-radius: 3px;
+
+    background: #ffffff;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Checked */
+
+.ch-remember input:checked + .ch-custom-checkbox {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 2px 7px rgba(168, 64, 139, 0.20);
+}
+
+
+/* Tick */
+
+.ch-remember input:checked + .ch-custom-checkbox::after {
+    content: "";
+
+    width: 4px;
+    height: 8px;
+
+    border: solid #ffffff;
+
+    border-width: 0 1.5px 1.5px 0;
+
+    transform: rotate(45deg);
+
+    margin-top: -2px;
+}
+
+
+/* Keyboard focus */
+
+.ch-remember input:focus-visible + .ch-custom-checkbox {
+    outline: 2px solid rgba(168, 64, 139, 0.35);
+
+    outline-offset: 2px;
+}
+/* =========================================
+   RTL
+   ========================================= */
+
+html[dir="rtl"] .ch-login-page {
+    direction: rtl;
+}
+
+html[dir="rtl"] .ch-card-controls {
+     right: auto;
+    left: 22px; 
+}
+
+html[dir="rtl"] .ch-input-icon {
+    left: auto;
+    right: 14px;
+}
+
+html[dir="rtl"] .ch-input-wrapper input {
+    padding-left: 42px;
+    padding-right: 42px;
+}
+
+html[dir="rtl"] .ch-password-toggle {
+    right: auto;
+    left: 13px;
+}
+
+html[dir="rtl"] .ch-login-options {
+    direction: rtl;
+}
+
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+html.dark-mode .ch-login-page::before {
+    background:
+        linear-gradient(
+            120deg,
+            rgba(17, 17, 17, 0.76),
+            rgba(168, 64, 139, 0.22),
+            rgba(17, 17, 17, 0.72)
+        );
+}
+
+html.dark-mode .ch-login-card {
+    background: rgba(17, 17, 17, 0.67);
+
+    border-color: rgba(255, 255, 255, 0.20);
+
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.48);
+}
+
+html.dark-mode .ch-sun-icon {
+    display: none;
+}
+
+html.dark-mode .ch-moon-icon {
+    display: block;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .ch-login-page {
+        padding: 15px;
+
+        min-height: 520px;
+    }
+
+    .ch-login-wrapper {
+        max-height: calc(100dvh - 30px);
+    }
+
+    .ch-login-card {
+        padding: 24px 22px 19px;
+
+        border-radius: 18px;
+    }
+
+    .ch-card-controls {
+        top: 10px;
+        right: 10px;
+    }
+
+    .ch-auth-control {
+        width: 31px;
+        height: 31px;
+    }
+
+    .ch-logo-image {
+        width: 26px;
+        height: 26px;
+    }
+
+    .ch-logo-text {
+        font-size: 23px;
+    }
+
+    .ch-login-tagline {
+        font-size: 10px;
+    }
+
+    .ch-login-heading {
+        margin-bottom: 15px;
+    }
+
+    .ch-login-heading h1 {
+        font-size: 27px;
+    }
+
+    .ch-login-heading p {
+        font-size: 15xpx;
+    }
+
+    .ch-form-group {
+        margin-bottom: 11px;
+    }
+
+    .ch-form-group label {
+        font-size: 12px;
+    }
+
+    .ch-input-wrapper input {
+        height: 40px;
+
+        font-size: 12px;
+    }
+
+    .ch-login-btn {
+        height: 40px;
+    }
+
+    .ch-social-btn {
+        height: 36px;
+        font-size: 10px;
+    }
+
+    .ch-social-btn span {
+        display: none;
+    }
+
+    .ch-social-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+/* =========================================
+   SHORT DESKTOP VIEW
+   ========================================= */
+
+@media (max-height: 700px) and (min-width: 601px) {
+
+    .ch-login-card {
+        padding-top: 21px;
+        padding-bottom: 17px;
+    }
+
+    .ch-card-controls {
+        top: 10px;
+        right: 10px;
+    }
+
+    .ch-login-brand {
+        margin-bottom: 8px;
+    }
+
+    .ch-logo-image {
+        width: 25px;
+        height: 25px;
+    }
+
+    .ch-logo-text {
+        font-size: 23px;
+    }
+
+    .ch-login-tagline {
+        margin-top: 4px;
+        font-size: 9px;
+    }
+
+    .ch-login-heading {
+        margin-bottom: 11px;
+    }
+
+    .ch-login-heading h1 {
+        font-size: 26px;
+    }
+
+    .ch-login-heading p {
+        font-size: 11px;
+    }
+
+    .ch-form-group {
+        margin-bottom: 9px;
+    }
+
+    .ch-input-wrapper input,
+    .ch-login-btn {
+        height: 38px;
+    }
+
+    .ch-login-divider {
+        margin: 10px 0;
+    }
+
+    .ch-social-btn {
+        height: 33px;
+    }
+
+    .ch-signup-row {
+        margin-top: 9px;
+    }
+}
+
+/* =====================================================
+   FINAL FIX — RTL + DARK MODE ALIGNMENT
+   Must be placed at the VERY END of CSS
+   ===================================================== */
+
+.ch-login-card > .ch-card-controls {
+    position: absolute !important;
+
+    top: 37px !important;
+    right: 28px !important;
+    left: auto !important;
+
+    height: 34px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 7px !important;
+
+    z-index: 999 !important;
+}
+
+
+/* Individual buttons */
+
+.ch-login-card > .ch-card-controls .ch-auth-control {
+    width: 34px !important;
+    height: 34px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* =====================================================
+   RTL
+   ===================================================== */
+
+html[dir="rtl"] .ch-login-card > .ch-card-controls {
+    right: auto !important;
+    left: 28px !important;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .ch-login-card > .ch-card-controls {
+        top: 31px !important;
+        right: 18px !important;
+        left: auto !important;
+    }
+
+    html[dir="rtl"] .ch-login-card > .ch-card-controls {
+        right: auto !important;
+        left: 18px !important;
+    }
+
+}

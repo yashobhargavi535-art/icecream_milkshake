@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Order Now | Cream Haven</title>
+
+    <!-- External CSS -->
+    <link
+        rel="stylesheet"
+        href="ordernow.css">
+         <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+<header class="site-header">
+
+    <div class="header-container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="brand-logo">
+
+            <!-- Logo Image Only -->
+            <img src="images/cream7.png" alt="Scoop Haven Logo">
+
+            <!-- Logo Name -->
+            <div class="brand-text">
+
+                <h1>
+                    <span>Cream</span>
+                    <strong>Haven</strong>
+                </h1>
+
+                <p>ICE CREAM & MILKSHAKES</p>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav">
+
+           <div class="nav-dropdown">
+
+    <a href="index.html" class="nav-link">
+        Home
+        <i class="fas fa-chevron-down"></i>
+    </a>
+
+    <div class="dropdown-menu">
+
+        <a href="index.html" class="dropdown-item" class="nav-link">
+            Home 1
+        </a>
+
+        <a href="home2.html" class="dropdown-item" class="nav-link">
+            Home 2
+        </a>
+
+    </div>
+
+</div>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="services.html" class="nav-link">
+                Services
+            </a>
+
+            <a href="pricing.html" class="nav-link">
+                Pricing
+            </a>
+
+            <a href="blog.html" class="nav-link">
+                Blog
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER BUTTONS -->
+        <div class="header-actions">
+
+            <!-- Dark Mode -->
+            <button
+                class="header-icon-btn theme-btn"
+                id="themeToggle"
+                title="Dark Mode">
+
+                <i class="fas fa-moon"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button
+                class="header-icon-btn rtl-btn"
+                id="rtlToggle"
+                title="RTL Mode">
+
+                <i class="fas fa-right-left"></i>
+
+            </button>
+
+
+            <!-- Login -->
+            <button class="login-btn">
+
+                <i class="fas fa-user"></i>
+
+                <span>Login</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+ 
+<!-- =========================================
+         ORDER NOW PAGE
+    ========================================== -->
+
+    <main class="ch-order-page">
+
+
+        <!-- BACK TO HOME -->
+
+        <div class="ch-page-top">
+
+            <a
+                href="home1.html"
+                class="ch-back-home"
+            >
+                <span>←</span>
+                Back to Home
+            </a>
+
+        </div>
+
+
+        <section class="ch-order-section">
+
+            <div class="ch-order-container">
+
+
+                <!-- =========================================
+                     SECTION HEADING
+                ========================================== -->
+
+                <div class="ch-order-heading">
+
+                    <p class="ch-order-tagline">
+                        MADE FOR EVERY SWEET CRAVING
+                    </p>
+
+                    <h1>
+                        Pick Your
+                        <span>Sweet Favourites</span>
+                    </h1>
+
+                    <p class="ch-order-description">
+                        Discover creamy scoops, refreshing milkshakes,
+                        warm waffles and irresistible desserts made
+                        to brighten every sweet moment.
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="ch-search-wrapper">
+
+                    <input
+                        type="search"
+                        id="productSearch"
+                        placeholder="Search your favourite treat..."
+                        aria-label="Search products"
+                    >
+
+                </div>
+
+
+                <!-- CATEGORY FILTER -->
+
+                <div class="ch-category-list">
+
+                    <button
+                        type="button"
+                        class="ch-category active"
+                        data-category="all"
+                    >
+                        All Treats
+                    </button>
+
+                    <button
+                        type="button"
+                        class="ch-category"
+                        data-category="icecream"
+                    >
+                        Ice Cream
+                    </button>
+
+                    <button
+                        type="button"
+                        class="ch-category"
+                        data-category="milkshake"
+                    >
+                        Milkshakes
+                    </button>
+
+                    <button
+                        type="button"
+                        class="ch-category"
+                        data-category="waffle"
+                    >
+                        Waffles
+                    </button>
+
+                    <button
+                        type="button"
+                        class="ch-category"
+                        data-category="dessert"
+                    >
+                        Desserts
+                    </button>
+
+                </div>
+
+
+                <!-- =========================================
+                     ORDER CONTENT
+                ========================================== -->
+
+                <div class="ch-order-layout">
+
+
+                    <!-- PRODUCTS -->
+
+                    <div class="ch-products-area">
+
+                        <div
+                            class="ch-product-grid"
+                            id="productGrid"
+                        >
+
+
+                            <!-- PRODUCT 1 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="icecream"
+                                data-name="Classic Vanilla"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Classic Vanilla4.jpg"
+                                        alt="Classic Vanilla Ice Cream"
+                                    >
+
+                                    <span class="ch-product-badge">
+                                        Classic
+                                    </span>
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Classic Vanilla
+                                    </h2>
+
+                                    <p>
+                                        Smooth, creamy vanilla made
+                                        for timeless sweet moments.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹149
+                                        </strong>
+                                        <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+                                        
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 2 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="icecream"
+                                data-name="Chocolate Fantasy"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Chocolate Fantasy.jpg"
+                                        alt="Chocolate Fantasy Ice Cream"
+                                    >
+
+                                    <span class="ch-product-badge">
+                                        Popular
+                                    </span>
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Chocolate Fantasy
+                                    </h2>
+
+                                    <p>
+                                        Rich chocolate cream with
+                                        a smooth indulgent finish.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹169
+                                        </strong>
+
+                                         <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 3 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="icecream"
+                                data-name="Strawberry Swirl"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Strawberry Swirl.jpg"
+                                        alt="Strawberry Swirl Ice Cream"
+                                    >
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Strawberry Swirl
+                                    </h2>
+
+                                    <p>
+                                        Creamy strawberry goodness
+                                        with a refreshing fruity touch.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹159
+                                        </strong>
+
+                                        <button
+                                           type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button> 
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 4 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="milkshake"
+                                data-name="Oreo Cream Shake"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Oreo Cream Shake.jpg"
+                                        alt="Oreo Cream Milkshake"
+                                    >
+
+                                    <span class="ch-product-badge">
+                                        Bestseller
+                                    </span>
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Oreo Cream Shake
+                                    </h2>
+
+                                    <p>
+                                        Thick vanilla shake blended
+                                        with irresistible cookie pieces.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹209
+                                        </strong>
+
+                                        <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 5 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="milkshake"
+                                data-name="Caramel Dream Shake"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Caramel Dream Shake.jpg"
+                                        alt="Caramel Dream Milkshake"
+                                    >
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Caramel Dream Shake
+                                    </h2>
+
+                                    <p>
+                                        Smooth caramel blended into
+                                        a rich and creamy shake.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹199
+                                        </strong>
+
+                                         <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 6 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="milkshake"
+                                data-name="Blueberry Bliss"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Blueberry Bliss.jpg"
+                                        alt="Blueberry Bliss Milkshake"
+                                    >
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Blueberry Bliss
+                                    </h2>
+
+                                    <p>
+                                        Creamy blueberry shake with
+                                        a smooth fruity finish.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹199
+                                        </strong>
+
+                                         <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 7 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="icecream"
+                                data-name="Pistachio Velvet"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Pistachio Velvet.jpg"
+                                        alt="Pistachio Velvet Ice Cream"
+                                    >
+
+                                    <span class="ch-product-badge">
+                                        New
+                                    </span>
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Pistachio Velvet
+                                    </h2>
+
+                                    <p>
+                                        Silky pistachio ice cream
+                                        with roasted nut crunch.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹179
+                                        </strong>
+
+                                       <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 8 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="icecream"
+                                data-name="Mango Sunshine"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Mango Sunshine.jpg"
+                                        alt="Mango Sunshine Ice Cream"
+                                    >
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Mango Sunshine
+                                    </h2>
+
+                                    <p>
+                                        Rich mango ice cream with
+                                        a bright refreshing finish.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹159
+                                        </strong>
+
+                                       <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 9 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="waffle"
+                                data-name="Chocolate Heaven Waffle"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Chocolate Heaven Waffle.jpg"
+                                        alt="Chocolate Heaven Waffle"
+                                    >
+
+                                    <span class="ch-product-badge">
+                                        Favourite
+                                    </span>
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Chocolate Heaven Waffle
+                                    </h2>
+
+                                    <p>
+                                        Warm waffle with chocolate,
+                                        cream and a delicious scoop.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹239
+                                        </strong>
+ <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 10 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="waffle"
+                                data-name="Strawberry Dream Waffle"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Strawberry Dream Waffle.jpg"
+                                        alt="Strawberry Dream Waffle"
+                                    >
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Strawberry Dream Waffle
+                                    </h2>
+
+                                    <p>
+                                        Crisp waffles with strawberries,
+                                        cream and sweet toppings.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹229
+                                        </strong>
+
+                                        <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 11 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="dessert"
+                                data-name="Brownie Bliss Sundae"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Brownie Bliss Sundae.jpg"
+                                        alt="Brownie Bliss Sundae"
+                                    >
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Brownie Bliss Sundae
+                                    </h2>
+
+                                    <p>
+                                        Warm brownie, creamy scoops
+                                        and rich chocolate sauce.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹219
+                                        </strong>
+
+                                        <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 12 -->
+
+                            <article
+                                class="ch-product-card"
+                                data-category="dessert"
+                                data-name="Chocolate Brownie Delight"
+                            >
+
+                                <div class="ch-product-image">
+
+                                    <img
+                                        src="images/Chocolate Brownie Delight.jpg"
+                                        alt="Chocolate Brownie Delight"
+                                    >
+
+                                </div>
+
+                                <div class="ch-product-content">
+
+                                    <h2>
+                                        Chocolate Brownie Delight
+                                    </h2>
+
+                                    <p>
+                                        Soft chocolate brownie served
+                                        with creamy ice cream.
+                                    </p>
+
+                                    <div class="ch-product-bottom">
+
+                                        <strong>
+                                            ₹199
+                                        </strong>
+ <button
+    type="button"
+    class="ch-add-order"
+    data-name="Classic Vanilla"
+    data-price="149"
+>
+    Add to Order
+</button>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         ORDER SUMMARY
+                    ========================================== -->
+
+                    <aside class="ch-order-summary">
+
+                        <div class="ch-summary-header">
+
+                            <p>
+                                YOUR SELECTION
+                            </p>
+
+                            <h2>
+                                Your Sweet Order
+                            </h2>
+
+                        </div>
+
+
+                        <div
+                            class="ch-cart-items"
+                            id="cartItems"
+                        >
+
+                            <div class="ch-empty-cart">
+
+                                Your order is waiting for
+                                something sweet.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ch-summary-details">
+
+                            <div>
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong id="subtotal">
+                                    ₹0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Delivery
+                                </span>
+
+                                <strong id="delivery">
+                                    ₹0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="ch-total-row">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong id="total">
+                                    ₹0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CUSTOMER DETAILS -->
+
+                        <form
+                            class="ch-checkout-form"
+                            id="checkoutForm"
+                        >
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Your name"
+                                required
+                            >
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Phone number"
+                                required
+                            >
+
+                            <textarea
+                                id="customerAddress"
+                                placeholder="Delivery address"
+                                required
+                            ></textarea>
+
+<button
+    type="button"
+    class="ch-place-order"
+    id="placeOrderBtn"
+>
+    Place Order
+</button>
+
+                        </form>
+
+
+                        
+<p
+    class="ch-order-message"
+    id="orderMessage"
+></p>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+
+        <!-- =================================================
+             COLUMN 1 : BRAND
+        ================================================== -->
+
+        <div class="footer-column footer-brand-column">
+
+            <a href="#" class="brand-logo">
+
+            <!-- Logo Image Only -->
+            <img src="images/cream7.png" alt="Scoop Haven Logo">
+
+                <!-- Logo Name -->
+                 <div class="brand-text">
+
+                <h1>
+                    <span>Cream</span>
+                    <strong>Haven</strong>
+                </h1>
+
+                     <p>ICE CREAM & MILKSHAKES</p>
+
+
+                </div>
+
+            </a>
+
+
+            <!-- Brand Description -->
+
+            <p class="footer-description">
+                Indulge in handcrafted ice creams, creamy milkshakes,
+                delicious desserts, and delightful treats made with
+                love and the finest ingredients to make every moment
+                a little sweeter.
+            </p>
+            
+              <!-- Social Icons -->
+
+            <div class="footer-social">
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                    title="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="WhatsApp"
+                    title="WhatsApp"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                    title="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Twitter"
+                    title="Twitter"
+                >
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+
+            </div>
+
+        </div>
+         
+        
+
+
+        <!-- =================================================
+             COLUMN 2 : QUICK LINKS
+        ================================================== -->
+
+        <div class="footer-column">
+
+            <h3 class="footer-title">
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>About Us</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Our Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Pricing</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =================================================
+             COLUMN 3 : OUR SERVICES
+        ================================================== -->
+
+        <div class="footer-column">
+
+            <h3 class="footer-title">
+                Our Services
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Ice Creams</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Milkshakes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Waffles</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Mocktails</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Desserts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Party Packs</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =================================================
+             COLUMN 4 : CUSTOMER CARE
+        ================================================== -->
+
+        <div class="footer-column">
+
+            <h3 class="footer-title">
+                Customer Care
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>FAQs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Shipping &amp; Delivery</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Returns &amp; Refunds</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Privacy Policy</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Terms &amp; Conditions</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="footer-arrow">›</span>
+                        <span>Cookie Policy</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =================================================
+             COLUMN 5 : GET IN TOUCH
+        ================================================== -->
+
+        <div class="footer-column contact-column">
+
+            <h3 class="footer-title">
+                Get In Touch
+            </h3>
+
+
+            <!-- Address -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <p>
+                    Hyderabad, Telangana
+                </p>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <p>
+                    hello@scoophaven.com
+                </p>
+
+            </div>
+
+
+            <!-- Opening Days -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                </div>
+
+                <p>
+                    Monday - Sunday
+                </p>
+
+            </div>
+
+ <!-- Timings -->
+<div class="contact-item">
+    <div class="contact-icon">
+        <i class="fa-solid fa-clock"></i>
+    </div>
+    <p>11:00 AM - 11:00 PM</p>
+</div>
+          
+        </div>
+
+    </div>
+
+</footer>
+
+<div class="footer-bottom">
+    <div class="footer-bottom-inner">
+
+        <p class="footer-copyright">
+            © 2026 <span>Cream Haven</span>. All Rights Reserved.
+        </p>
+
+        <div class="footer-legal-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-conditions.html">Terms & Conditions</a>
+            <a href="cookie-policy.html">Cookie Policy</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const themeBtn = document.querySelector(".theme-btn");
+    const rtlBtn = document.querySelector(".rtl-btn");
+    const loginBtn = document.querySelector(".login-btn");
+
+
+    if (themeBtn) {
+
+        themeBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+            const isDark =
+                document.body.classList.contains("dark-mode");
+
+
+            const icon = themeBtn.querySelector("i");
+
+            if (icon) {
+
+                if (isDark) {
+                    icon.classList.remove("fa-moon");
+                    icon.classList.add("fa-sun");
+                } else {
+                    icon.classList.remove("fa-sun");
+                    icon.classList.add("fa-moon");
+                }
+
+            }
+
+ 
+
+            localStorage.setItem(
+                "scoopHavenDarkMode",
+                isDark ? "enabled" : "disabled"
+            );
+
+        });
+
+    }
+  
+
+
+    const savedTheme =
+        localStorage.getItem("scoopHavenDarkMode");
+
+    if (savedTheme === "enabled") {
+
+        document.body.classList.add("dark-mode");
+
+        const icon = themeBtn?.querySelector("i");
+
+        if (icon) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+
+    }
+
+
+
+    if (rtlBtn) {
+
+        rtlBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("rtl-mode");
+
+            const isRTL =
+                document.body.classList.contains("rtl-mode");
+
+         
+
+            document.documentElement.dir =
+                isRTL ? "rtl" : "ltr";
+
+            document.documentElement.lang =
+                isRTL ? "ar" : "en";
+
+            /* Save preference */
+
+            localStorage.setItem(
+                "scoopHavenRTL",
+                isRTL ? "enabled" : "disabled"
+            );
+
+        });
+
+    }
+
+
+    const savedRTL =
+        localStorage.getItem("scoopHavenRTL");
+
+    if (savedRTL === "enabled") {
+
+        document.body.classList.add("rtl-mode");
+
+        document.documentElement.dir = "rtl";
+        document.documentElement.lang = "ar";
+
+    }
+
+    if (loginBtn) {
+
+        loginBtn.addEventListener("click", function () {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+});
+</script>
+
+
+<script src="ordernow.js"></script>
+</body>
+
+</html>

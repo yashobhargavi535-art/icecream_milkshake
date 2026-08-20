@@ -1,0 +1,1089 @@
+/* =====================================================
+   CREAM HAVEN — SIGN UP PAGE
+   ===================================================== */
+
+:root {
+    --primary: #a8408b;
+    --secondary: #ec6547;
+
+    --black: #111111;
+    --white: #ffffff;
+}
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   PAGE
+   ===================================================== */
+
+.ch-signup-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(168, 64, 139, 0.34),
+            rgba(236, 101, 71, 0.18)
+        ),
+        url("images/cream\ haven3.png")
+        center center / cover no-repeat;
+}
+
+
+.ch-signup-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(17, 17, 17, 0.48),
+            rgba(168, 64, 139, 0.10),
+            rgba(17, 17, 17, 0.48)
+        );
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.ch-signup-card {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(100%, 510px);
+
+    max-height: calc(100dvh - 24px);
+
+    padding: 18px 34px 14px;
+
+    border-radius: 21px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    border: 1px solid rgba(17, 17, 17, 0.12);
+
+    box-shadow:
+        0 20px 55px rgba(17, 17, 17, 0.32);
+
+    overflow: hidden;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =====================================================
+   CARD TOP
+   THIS IS THE IMPORTANT SCREENSHOT ALIGNMENT
+   ===================================================== */
+
+.ch-card-top {
+    width: 100%;
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    min-width: 0;
+}
+
+
+/* Logo Image */
+
+.brand-logo img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    transition: transform var(--transition);
+}
+
+
+/* Small hover effect */
+
+.brand-logo:hover img {
+    transform: scale(1.04);
+}
+
+
+
+/* Logo Name */
+
+.brand-text h1 {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 33px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* Cream */
+
+.brand-text h1 span {
+    color: var(--primary);
+}
+
+
+/* Haven */
+
+.brand-text h1 strong {
+    color: var(--secondary);
+
+    font-weight: 800;
+}
+
+
+/* Tagline */
+
+.brand-text p {
+    margin-top: 5px;
+  margin-left: 18px;
+    color: var(--primary);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   CONTROLS
+   ===================================================== */
+
+.ch-card-controls {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+
+.ch-control-btn {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(17, 17, 17, 0.25);
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ch-control-btn:hover {
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border-color: var(--primary);
+
+    transform: translateY(-1px);
+}
+
+
+.ch-control-btn svg {
+    width: 16px;
+    height: 16px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+.ch-sun-icon {
+    display: none;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.ch-signup-intro {
+    text-align: center;
+
+    margin: 7px 0 10px;
+}
+
+
+.ch-signup-intro h1 {
+    margin-bottom: 3px;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.ch-signup-form {
+    width: 100%;
+}
+
+
+.ch-form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 10px;
+
+    row-gap: 6px;
+}
+
+
+.ch-form-group label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #111111;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.ch-input-box {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.ch-input-box input {
+    width: 100%;
+
+    height: 34px;
+
+    padding: 0 34px;
+
+    border: 1px solid rgba(17, 17, 17, 0.20);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.ch-input-box input::placeholder {
+    color: rgba(17, 17, 17, 0.45);
+}
+
+
+.ch-input-box input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(168, 64, 139, 0.10);
+}
+
+
+.ch-input-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 11px;
+
+    width: 15px;
+    height: 15px;
+
+    transform: translateY(-50%);
+
+    fill: none;
+
+    stroke: var(--primary);
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   EYE
+   ===================================================== */
+
+.ch-eye-btn {
+    position: absolute;
+
+    top: 50%;
+    right: 8px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+}
+
+
+.ch-eye-btn svg {
+    width: 15px;
+    height: 15px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+.eye-closed {
+    display: none;
+}
+
+
+/* =====================================================
+   TERMS
+   ===================================================== */
+
+.ch-terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 6px;
+
+    margin: 7px 0;
+
+    color: rgba(17, 17, 17, 0.70);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+}
+
+
+.ch-terms input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+
+.ch-checkmark {
+    width: 13px;
+    height: 13px;
+
+    flex: 0 0 13px;
+
+    margin-top: 1px;
+
+    border: 1px solid #555555;
+
+    border-radius: 3px;
+
+    background: #ffffff;
+
+    position: relative;
+}
+
+
+.ch-terms input:checked +
+.ch-checkmark {
+    background: var(--primary);
+
+    border-color: var(--primary);
+}
+
+
+.ch-terms input:checked +
+.ch-checkmark::after {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 7px;
+
+    left: 4px;
+    top: 1px;
+
+    border: solid #ffffff;
+
+    border-width: 0 1.5px 1.5px 0;
+
+    transform: rotate(45deg);
+}
+
+
+.ch-terms a {
+    color: var(--secondary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   CREATE ACCOUNT
+   ===================================================== */
+
+.ch-create-btn {
+    width: 100%;
+
+    height: 35px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 17px rgba(168, 64, 139, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.ch-create-btn:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 9px 20px rgba(168, 64, 139, 0.25);
+}
+
+
+/* =====================================================
+   DIVIDER
+   ===================================================== */
+
+.ch-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 7px 0;
+}
+
+
+.ch-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(17, 17, 17, 0.14);
+}
+
+
+.ch-divider strong {
+    color: rgba(17, 17, 17, 0.50);
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   SOCIAL
+   ===================================================== */
+
+.ch-social-row {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+}
+
+
+.ch-social-btn {
+    width: 100%;
+
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: 1px solid rgba(17, 17, 17, 0.18);
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ch-social-btn:hover {
+    border-color: var(--primary);
+
+    background:
+        rgba(168, 64, 139, 0.06);
+
+    transform: translateY(-1px);
+}
+
+
+.google-icon {
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.apple-icon {
+    width: 14px;
+    height: 14px;
+
+    fill: currentColor;
+}
+
+
+.facebook-icon {
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   LOGIN LINK
+   ===================================================== */
+
+.ch-login-link {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 6px;
+
+    color: rgba(17, 17, 17, 0.68);
+
+    font-size: 11px;
+}
+
+
+.ch-login-link a {
+    color: var(--secondary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.ch-login-link a:hover {
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   DARK MODE
+   ===================================================== */
+
+html.dark-mode .ch-signup-card {
+    background: #111111;
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.17);
+}
+
+
+html.dark-mode .ch-control-btn {
+    background: #111111;
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.30);
+}
+
+
+html.dark-mode .ch-brand-tagline {
+    color: var(--primary);
+}
+
+
+html.dark-mode .ch-signup-intro p {
+    color: white;
+}
+
+
+html.dark-mode .ch-form-group label {
+    color: #ffffff;
+}
+
+
+html.dark-mode .ch-input-box input {
+    background: #111111;
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+
+html.dark-mode .ch-input-box input::placeholder {
+    color: white;
+}
+
+
+html.dark-mode .ch-terms {
+    color: white;
+}
+
+
+html.dark-mode .ch-checkmark {
+    background: #111111;
+
+    border-color: rgba(255, 255, 255, 0.60);
+}
+
+
+html.dark-mode .ch-divider span {
+    background: rgba(255, 255, 255, 0.20);
+}
+
+
+html.dark-mode .ch-divider strong {
+    color: white;
+}
+
+
+html.dark-mode .ch-social-btn {
+    background: #111111;
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.23);
+}
+
+
+html.dark-mode .ch-login-link {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+
+html.dark-mode .ch-moon-icon {
+    display: none;
+}
+
+
+html.dark-mode .ch-sun-icon {
+    display: block;
+}
+
+
+/* =====================================================
+   RTL
+   ===================================================== */
+
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+
+html[dir="rtl"] .ch-input-icon {
+    left: auto;
+
+    right: 11px;
+}
+
+
+html[dir="rtl"] .ch-input-box input {
+    padding-left: 34px;
+
+    padding-right: 34px;
+}
+
+
+html[dir="rtl"] .ch-eye-btn {
+    right: auto;
+
+    left: 8px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 560px) {
+
+    .ch-signup-card {
+        width: 100%;
+
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+
+    .ch-brand-name {
+        font-size: 25px;
+    }
+
+
+    .ch-brand-logo {
+        width: 46px;
+        height: 46px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .ch-signup-card {
+        padding: 15px 18px 12px;
+
+        border-radius: 18px;
+    }
+
+
+    .ch-card-top {
+        min-height: 48px;
+    }
+
+
+    .ch-brand-logo {
+        width: 43px;
+        height: 43px;
+    }
+
+
+    .ch-brand-name {
+        font-size: 23px;
+    }
+
+
+    .ch-brand-tagline {
+        font-size: 7px;
+
+        letter-spacing: 1.4px;
+    }
+
+
+    .ch-control-btn {
+        width: 33px;
+        height: 33px;
+    }
+
+
+    .ch-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ch-signup-intro {
+        margin-top: 5px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .ch-signup-intro h1 {
+        font-size: 21px;
+    }
+
+}
+
+
+@media (max-height: 700px) {
+
+    .ch-signup-card {
+        padding-top: 13px;
+
+        padding-bottom: 10px;
+    }
+
+
+    .ch-card-top {
+        min-height: 45px;
+    }
+
+
+    .ch-brand-logo {
+        width: 41px;
+        height: 41px;
+    }
+
+
+    .ch-brand-name {
+        font-size: 23px;
+    }
+
+
+    .ch-brand-tagline {
+        margin-top: 3px;
+
+        font-size: 7px;
+    }
+
+
+    .ch-signup-intro {
+        margin-top: 4px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .ch-signup-intro h1 {
+        font-size: 20px;
+    }
+
+
+    .ch-form-grid {
+        row-gap: 4px;
+    }
+
+
+    .ch-form-group label {
+        margin-bottom: 2px;
+
+        font-size: 10px;
+    }
+
+
+    .ch-input-box input {
+        height: 31px;
+    }
+
+
+    .ch-terms {
+        margin: 5px 0;
+    }
+
+
+    .ch-create-btn {
+        height: 33px;
+    }
+
+
+    .ch-divider {
+        margin: 5px 0;
+    }
+
+
+    .ch-social-btn {
+        height: 29px;
+    }
+
+
+    .ch-login-link {
+        margin-top: 4px;
+    }
+
+}
